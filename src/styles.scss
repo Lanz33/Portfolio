@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    background-color: #124658;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../public/assets/font/poppins-v22-latin-regular.woff2') format('woff2');
+  }
+  /* poppins-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./../public/assets/font/poppins-v22-latin-700.woff2) format('woff2');
+  }
