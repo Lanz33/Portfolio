@@ -1,11 +1,93 @@
-img {
-    width: 646px;
-    height: 705px;
-    margin-top: 106px;
-    margin-left: 47px;
-        display: block;
-        background-image: url('./../../../public/assets/img/portraitBackground.svg');
-        background-repeat: no-repeat;
-        background-size: cover; /* oder contain, je nach Wunsch */
-        
+.portrait-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #141D2E;
+    width: 100%;
+    flex-direction: column;
+    height: 90vh;
+}
+
+svg {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    margin-top: -10%;
+    height: 100%;
+
+}
+
+.portrait {
+    display: flex;
+    max-width: 40%;
+    display: block;
+    background-image: url('./../../../public/assets/img/portraitBackground.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.portrait-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.portrait-content-IAm {
+    font-size: 3rem;
+    font-weight: 400;
+    transform: rotate(-90deg);
+    width: 16%;
+}
+
+.welcome-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.name {
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    width: 620px;
+    p {
+        color: #9747FF;
+        margin: 0;
+    }
+}
+
+.icon-line {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    width: 590px;
+
+    .line {
+        width: 100px;
+        height: 3px;
+        background-color: #9747FF;
+    }
+    .mail-adress {
+        margin-left: 10px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.icon-img{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
 }

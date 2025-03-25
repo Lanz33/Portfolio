@@ -1,20 +1,19 @@
-<div class="header">
-    <div class="header-name">
-        <h1>C</h1>
-        <h1>h</h1>
-        <h1>r</h1>
-        <h1>i</h1>
-        <h1>s</h1>
-        <h1>t</h1>
-        <h1>i</h1>
-        <h1>a</h1>
-        <h1>n</h1>
-    </div>
+<section class="header">
+    <svg width="200" height="100">
+        <defs>
+          <path id="curve" d="M20,50 C20,20 80,20 80,50 C80,80 140,80 140,50 C140,20 180,20 180,50" />
+        </defs>
+        <text>
+          <textPath xlink:href="#curve" class="header-name">
+            Christian
+          </textPath>
+        </text>
+      </svg>
+
     <div class="header-menu">
         <a routerLink="/aboutMe" routerLinkActive="active">About me</a>
         <a routerLink="/skills" routerLinkActive="active">Skills</a>
         <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
         <div class="languageSection">Language</div>
-
     </div>
-</div>
+</section>
