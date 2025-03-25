@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { LandingsiteComponent } from './landingsite/landingsite.component';
+import { AppComponent } from './app.component'; // Importiere die AppComponent
 
 export const routes: Routes = [
-    { path:'', component: LandingsiteComponent}, 
-    { path: '**', redirectTo: 'login' }
+    { path: '', component: AppComponent }, // Verwende die AppComponent
+    { path: '**', redirectTo: '' } // Leitet unbekannte Pfade zur Startseite um
 ];

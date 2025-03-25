@@ -3,7 +3,10 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    background-color: #141d2f;
+    background-color: #141d2f00;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header-menu {
@@ -41,7 +44,9 @@ svg {
     stroke: none; /* Pfad unsichtbar machen */
 }
 
-.header-name textPath {
+textPath {
+    fill: none;
+    stroke: none;
 }
 
 .header-name:hover textPath {

@@ -52,6 +52,7 @@
     p {
         color: #9747FF;
         margin: 0;
+        font-size: 2.5rem;
     }
 }
 
@@ -83,70 +84,44 @@
     cursor: pointer;
 }
 
-.rotating-svg1 {
+.rotating-svg {
     position: absolute;
     top: 50%;
-    left: 10%;
     transform: translate(-50%, -50%); 
     width: 50%; 
     height: auto;
     z-index: 1; 
-    animation: rotateCW 27s linear infinite; 
+  
     filter: blur(20px);
     opacity: 0.5;
+    &1 {
+        left: 10%;
+        animation: rotateCW 27s linear infinite; 
+        
+    }
+    &2 {
+        left: 10%;
+        animation: rotateCCW 30s linear infinite; 
+        
+    }
+    &3 {
+        animation: rotateCW 36s linear infinite; 
+        left: 10%;
+    }
+    &4 {
+        animation: rotateCCW 50s linear infinite;
+        left: 30%; 
+    }
+    &5 {
+        animation: rotateCCW 32s linear infinite; 
+        left: 30%;
+    }
+    &6 {
+        animation: rotateCW 34s linear infinite; 
+        left: 30%;
+    }
 }
 
-.rotating-svg2 {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%); 
-    width: 50%; 
-    height: auto;
-    z-index: 1; 
-    animation: rotateCCW 30s linear infinite; 
-    filter: blur(20px);
-    opacity: 0.5;
-}
-
-.rotating-svg3 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%); 
-    width: 50%; 
-    height: auto;
-    z-index: 1; 
-    animation: rotateCW 36s linear infinite; 
-    filter: blur(20px);
-    opacity: 0.5;
-}
-
-.rotating-svg4 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%); 
-    width: 50%; 
-    height: auto;
-    z-index: 1; 
-    animation: rotateCW 30s linear infinite; 
-    filter: blur(20px);
-    opacity: 0.5;
-}
-
-.rotating-svg5 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%); 
-    width: 50%; 
-    height: auto;
-    z-index: 1; 
-    animation: rotateCCW 32s linear infinite; 
-    filter: blur(20px);
-    opacity: 0.5;
-}
 
 @keyframes rotateCW {
     from {
@@ -172,6 +147,10 @@ svg {
     display: flex;
     width: 100%;
     z-index: 2;
-    margin-top: -10%;
+    margin-top: -15%;
     height: 100%;
+}
+
+.top-shadow-svg {
+    filter: drop-shadow(0px -5px 5px rgba(0, 0, 0, 0.5)); /* Schatten oben */
 }
