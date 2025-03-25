@@ -9,22 +9,13 @@
     height: 90vh;
 }
 
-svg {
-    display: flex;
-    width: 100%;
-    z-index: 2;
-    margin-top: -10%;
-    height: 100%;
-
-}
-
 .portrait {
-    display: flex;
     max-width: 40%;
     display: block;
-    background-image: url('./../../../public/assets/img/portraitBackground.svg');
+    margin-left: 14%;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .portrait-content {
@@ -90,4 +81,97 @@ svg {
     height: 30px;
     margin-left: 20px;
     cursor: pointer;
+}
+
+.rotating-svg1 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%); 
+    width: 50%; 
+    height: auto;
+    z-index: 1; 
+    animation: rotateCW 27s linear infinite; 
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+.rotating-svg2 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%); 
+    width: 50%; 
+    height: auto;
+    z-index: 1; 
+    animation: rotateCCW 30s linear infinite; 
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+.rotating-svg3 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+    width: 50%; 
+    height: auto;
+    z-index: 1; 
+    animation: rotateCW 36s linear infinite; 
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+.rotating-svg4 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+    width: 50%; 
+    height: auto;
+    z-index: 1; 
+    animation: rotateCW 30s linear infinite; 
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+.rotating-svg5 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+    width: 50%; 
+    height: auto;
+    z-index: 1; 
+    animation: rotateCCW 32s linear infinite; 
+    filter: blur(20px);
+    opacity: 0.5;
+}
+
+@keyframes rotateCW {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateCCW {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+svg {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    margin-top: -10%;
+    height: 100%;
 }
