@@ -3,8 +3,9 @@ body{
     background-color: #151E30;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
+    max-width: 1440px;
+    min-width: 320px;
 }
-
 
 @font-face {
     font-display: swap; 
