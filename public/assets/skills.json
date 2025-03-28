@@ -1,0 +1,46 @@
+[
+  {
+    "title": "HTML",
+    "pfad": "assets/img/icon-html.svg"
+  },
+  {
+    "title": "CSS",
+    "pfad": "assets/img/icon-css.svg"
+  },
+  {
+    "title": "JavaScript",
+    "pfad": "assets/img/icon-js.svg"
+  },
+  {
+    "title": "TypeScript",
+    "pfad": "assets/img/icon-ts.svg"
+  },
+  {
+    "title": "Angular",
+    "pfad": "assets/img/icon-angular.svg"
+  },
+  {
+    "title": "Firebase",
+    "pfad": "assets/img/icon-firebase.svg"
+  },
+  {
+    "title": "Git",
+    "pfad": "assets/img/icon-git.svg"
+  },
+  {
+    "title": "Rest API",
+    "pfad": "assets/img/icon-rest-api.svg"
+  },
+  {
+    "title": "Scrum",
+    "pfad": "assets/img/icon-scrum.svg"
+  },
+  {
+    "title": "Material Design",
+    "pfad": "assets/img/icon-material-design.svg"
+  },
+  {
+    "title": "Continually learning",
+    "pfad": "assets/img/icon-learning.svg"
+  }
+]

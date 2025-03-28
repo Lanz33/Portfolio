@@ -1,13 +1,11 @@
-
-
 .portrait-section {
     display: flex;
     justify-content:first baseline;
     position: relative;
-    background-color: #141D2E;
+    background-color: #151E30;
     width: 100%;
     flex-direction: column;
-    height: 75vh;
+    height: 100%;
 }
 
 .portrait {
@@ -50,11 +48,13 @@
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+    
 }
 
 .portrait-content-text-responsive{
     display: none;
     margin-bottom: 20px;
+    margin-top: -50px;
 }
 
 .name {
@@ -183,7 +183,7 @@
 }
 
 .top-shadow-svg {
-    filter: drop-shadow(0px -10px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(-4px -5px 3px rgba(0, 0, 0, 0.5));
 }
 
 @media screen and (max-width: 840px) {

@@ -1,5 +1,10 @@
-<p>skills works!</p>
+<section>
+    <div class="skill-icons">
+        <div *ngFor="let skill of skills" class="skill-icon">
+            <img [src]="skill.pfad" [alt]="skill.title">
+            <p>{{skill.title}}</p>
+        </div>
+    </div>
 
-<div style="height: 500px;">
 
-</div>
+</section>
