@@ -36,7 +36,7 @@ h2{
 }
 
 .about-me-image {
-    margin-top: 10%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,28 +74,28 @@ h2{
 
 .slide-in-right {
     animation: slide-in 0.5s both;
-    animation-timeline: view(20% 10%);
+    animation-timeline: view(10% 10%);
     transition: 0.5s;
 }
 
 @keyframes slide-in {
     0% {
-        transform: translateX(100%);
+        transform: translateY(-10px) scale(0.3);
         opacity: 0;
     }
 
     30% {
-        transform: translateX(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 
     70% {
-        transform: translateX(0);
+        transform: translateY(220px) scale(1);
         opacity: 1;
     }
 
     100% {
-        transform: translateX(100%);
+        transform: translateY(220px) scale(0.3);
         opacity: 0;
     }
 }
