@@ -1,0 +1,53 @@
+[
+    {
+      "title": "Pokédex",
+      "description": "A simple Pokemon app.",
+      "image": "assets/img/pokedex.png",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "API"
+      ],
+      "github": "",
+      "live": ""
+    },
+    {
+      "title": "Liferando",
+      "description": "Imitation of the famous app Liferando.",
+      "image": "assets/img/liferando.png",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "github": "",
+      "live": ""
+    },
+    {
+      "title": "El Pollo Loco",
+      "description": "2D jump and run game.",
+      "image": "assets/img/elpololoco.png",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Firebase"
+      ],
+      "github": "",
+      "live": ""
+    },
+    {
+        "title": "Join",
+        "description": "Description of project 3.",
+        "image": "assets/img/Join.png",
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Firebase"
+        ],
+        "github": "",
+        "live": ""
+      }
+  ]

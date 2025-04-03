@@ -2,7 +2,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin: 0 0 0 100px;
 }
 
@@ -23,23 +23,30 @@ img {
     }
 }
 
-h2{
+h2 {
     font-size: 90px;
     line-height: 120%;
 }
 
 .about-me-content {
-    margin-top: 32px;;
+    margin-top: 32px;
+    ;
     width: 40%;
     display: grid;
     flex-direction: column;
+    height: 100%;
 }
 
 .about-me-image {
-    
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    margin-top: 100px;
+    position: sticky;
+    top: calc(50% - 175px);
+    right: 0;
+    padding-top: 20px;
 }
 
 .line-to-about-me-img {
@@ -58,14 +65,17 @@ h2{
         opacity: 0;
         transform: translateY(20px) scale(0.3);
     }
+
     30% {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+
     70% {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+
     100% {
         opacity: 0;
         transform: translateY(20px) scale(0.3);
@@ -74,28 +84,26 @@ h2{
 
 .slide-in-right {
     animation: slide-in 0.5s both;
-    animation-timeline: view(10% 10%);
+    animation-timeline: view(10% 20%);
     transition: 0.5s;
 }
 
 @keyframes slide-in {
     0% {
-        transform: translateY(-10px) scale(0.3);
+        transform: scale(0.3);
         opacity: 0;
     }
 
-    30% {
-        transform: translateY(0) scale(1);
+    20% {
+        transform: scale(1);
         opacity: 1;
     }
-
-    70% {
-        transform: translateY(220px) scale(1);
+    80% {
+        transform: scale(1);
         opacity: 1;
     }
-
     100% {
-        transform: translateY(220px) scale(0.3);
+        transform: scale(0.2);
         opacity: 0;
     }
 }
@@ -105,12 +113,14 @@ h2{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    img{
+
+    img {
         width: 32px;
         height: 32px;
         margin: 0 10px;
         border: none;
         box-shadow: none;
+
         :hover {
             transform: scale(1.05);
         }
