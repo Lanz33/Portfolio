@@ -118,3 +118,64 @@ h2{
     background-color: #9747FF;
     margin-left: 20px;
 }
+
+.auto-show {
+    animation: auto-show-animation both;
+    animation-timeline: view(5px 10%);
+}
+
+.button-container{
+    margin-top: 36px;
+}
+
+.button-git{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-left: 35px;
+    &:hover{
+        background-color: #70E61C;
+    }
+
+}
+
+.button-link{
+    background-color: #9747FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    border: none;
+    &:hover{
+        background-color: #70E61C;
+        transition: all 0.3s ease;
+    }
+}
+
+@keyframes auto-show-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.3);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.3);
+    }
+}

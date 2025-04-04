@@ -5,7 +5,7 @@
         <div class="post-line-header"></div>
     </div>
     <div class="portfolio-container">
-        <div *ngFor="let project of projects; let i = index" class="portfolio-item"
+        <div *ngFor="let project of projects; let i = index" class="portfolio-item auto-show"
             [ngClass]="{'reverse': i % 2 !== 0}">
             <div class="image-container">
                 <img [src]="project.image" [alt]="project.title">
@@ -17,8 +17,8 @@
                     <p *ngFor="let skill of project.skills" class="skill">{{skill}}</p>
                 </div>
                 <div class="button-container">
-                    <a [href]="project.link" target="_blank" class="button">View Project</a>
-                    <a [href]="project.github" target="_blank" class="button">GitHub</a>
+                    <a [href]="project.link" target="_blank" class="button-link">View Project</a>
+                    <a [href]="project.github" target="_blank" class="button-git">GitHub</a>
                 </div>
             </div>
         </div>
