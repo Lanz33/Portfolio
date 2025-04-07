@@ -2,25 +2,94 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 100vh;
 }
 
 .contact-form {
-    min-width: 150px;
     max-width: 500px;
-    width: 100%;
-}
-
-.example-full-width {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.contact-form-area{
+.inputField {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    border: 1px solid #9747FF;
+    border-radius: 10px;
+    margin-bottom: 32px;
+
+    &.ng-invalid.ng-touched {
+        border: 1px solid red;
+        /* Roter Rahmen, wenn ungültig und berührt */
+    }
+
+    &.ng-valid.ng-touched {
+        border: 1px solid green;
+    }
+
+    &:focus-visible {
+        border: #70E61C 1px solid;
+    }
+
+    &:focus-visible {
+        border: #70E61C 1px solid;
+    }
+
+
+    input {
+        width: 90%;
+        background-color: #141D2F;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        padding: 0% 0% 0% 5%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    textarea {
+        width: 90%;
+        height: 200px;
+        background-color: #141D2F;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        padding: 0% 0% 0% 5%;
+        margin: 5px;
+        resize: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+
+.contact-text {
     width: 40%;
 }
 
+.contact-form-area {
+    width: 40%;
+}
+
+.send-button {
+    width: 50%;
+    height: 50px;
+    background-color: #141D2F;
+    color: white;
+    justify-content: center;
+    border: 1px solid #9747FF;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 32px;
+}
