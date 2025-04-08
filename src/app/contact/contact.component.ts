@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, ChangeDetectionStrategy, model, inject } from '@angular/core';
-import { FormControl, FormsModule, NgForm, Validators } from '@angular/forms';
+import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog'; // Importiere MatDialogModule
+
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, MatCheckboxModule, MatInputModule, CommonModule],
+  imports: [FormsModule, MatCheckboxModule, MatInputModule, CommonModule, ReactiveFormsModule, MatDialogModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
