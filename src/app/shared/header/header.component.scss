@@ -28,16 +28,66 @@
         cursor: pointer;
     }
 }
-
+.animated-letter{
+    animation: text-anim 1s ease-in-out infinite;
+    font-size: 1.5rem;
+    font-weight: 700;
+    fill: #9747FF;
+}
 .header-name {
     fill: #ffffff;
     font-size: 1.5rem;
     font-weight: 700;
+
+    svg {
+        width: 300px;
+        height: 50px;
+    }
 }
 
-svg {
-    width: 300px;
-    height: 50px;
+textPath a {
+    animation: text-anim 1s ease-in-out infinite alternate;
+    font-size: 1.5rem;
+    font-weight: 700;
+    fill: #9747FF;
+    position:absolute;
+}
+
+/* Individuelle Animation-Delays für jeden Buchstaben */
+textPath a:nth-child(1) {
+    animation-delay: 0s;
+}
+
+textPath a:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+textPath a:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+textPath a:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+textPath a:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+textPath a:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+textPath a:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+textPath a:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+textPath a:nth-child(9) {
+    animation-delay: 0.8s;
 }
 
 #sinePath {
@@ -50,6 +100,16 @@ textPath {
     stroke: none;
 }
 
-.header-name:hover textPath {
-    transition: start-offset 5s linear;
+@keyframes text-anim {
+    0% {
+       transform: translateY(0); // Startposition
+       stroke: #9747FF;
+    }
+    50% {
+        transform: translateY(-10px); // 10px nach oben angehoben
+        stroke: #ffffff
+    }
+    100% {
+        transform: translateY(0); // Zurück zur Startposition
+    }
 }
