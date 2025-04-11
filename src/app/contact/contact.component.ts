@@ -1,20 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, ChangeDetectionStrategy, model, inject } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
-import { MatDialogModule } from '@angular/material/dialog'; // Importiere MatDialogModule
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { PrivacyPolicyOverlayComponent } from '../privacy-policy-overlay/privacy-policy-overlay.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule, MatCheckboxModule, MatInputModule, CommonModule, ReactiveFormsModule, MatDialogModule],
+  imports: [
+    FormsModule, 
+    MatCheckboxModule, 
+    MatInputModule, 
+    CommonModule, 
+    ReactiveFormsModule, 
+    MatDialogModule,
+    PrivacyPolicyOverlayComponent
+  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class ContactComponent {
   checked = false;
   indeterminate = false;
@@ -22,9 +29,10 @@ export class ContactComponent {
   labelPosition: 'before' | 'after' = 'after';
   isDisabled = false;
   submitted = false;
+  showPrivacyPolicy = false;
 
-  http=inject(HttpClient);
-  contactData ={
+  http = inject(HttpClient);
+  contactData = {
     name: '',
     email: '',
     message: ''
@@ -48,7 +56,6 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
@@ -57,9 +64,16 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
+  }
+
+  openPrivacyPolicy() {
+    this.showPrivacyPolicy = true;
+  }
+
+  onPrivacyPolicyClosed() {
+    this.showPrivacyPolicy = false;
   }
 
   getLabelPosition(): 'before' | 'after' {

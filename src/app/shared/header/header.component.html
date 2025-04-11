@@ -1,32 +1,17 @@
 <section class="header">
-  <div class="header-name">
-    <svg viewBox="0 0 300 30">
-        <path id="sinePath" d="M0,25 C100,5 200,45 300,25" />
-        <text>
-            <textPath href="#sinePath" class="animated-letter">
-                <a>C</a>
-                <a>h</a>
-                <a>r</a>
-                <a>i</a>
-                <a>s</a>
-                <a>t</a>
-                <a>i</a>
-                <a>a</a>
-                <a>n</a>
-            </textPath>
-        </text>
-    </svg>
-</div>
+    <div class="header-name">
+        <span *ngFor="let letter of scrambledName; let i = index" [class.first-letter]="i === 0" [class.last-letter]="i === 16">{{ letter }}</span>
+    </div>
 
     <div class="header-menu">
         <a routerLink="/aboutMe" routerLinkActive="active">About me</a>
         <a routerLink="/skills" routerLinkActive="active">Skills</a>
         <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
         <div class="title">
-          <!-- <h1>{{ 'demo.title' | translate }}</h1>
+            <!-- <h1>{{ 'demo.title' | translate }}</h1>
           <span>Switch languages at runtime: </span>
           <button (click)="useLanguage('en')">en</button>
           <button (click)="useLanguage('de')">de</button> -->
-      </div>
+        </div>
     </div>
 </section>

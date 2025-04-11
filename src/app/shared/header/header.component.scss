@@ -28,88 +28,56 @@
         cursor: pointer;
     }
 }
-.animated-letter{
-    animation: text-anim 1s ease-in-out infinite;
-    font-size: 1.5rem;
-    font-weight: 700;
-    fill: #9747FF;
-}
+
 .header-name {
+    width: 200px;
     fill: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
+    letter-spacing: 3px;
+    font-family: Poppins, monospace;
+    display: flex;
+    justify-content: flex-start;
 
-    svg {
-        width: 300px;
-        height: 50px;
+    span {
+        display: inline-block;
+        width: 22px; // Feste Breite für jeden Buchstaben
+        text-align: center;
+    }
+
+    .first-letter {
+        animation: color-change-violett 4s ease-in-out infinite;
+    }
+    .last-letter {
+        animation: color-change-green 4s ease-in-out infinite;
+        animation-delay: 1s;
     }
 }
 
-textPath a {
-    animation: text-anim 1s ease-in-out infinite alternate;
-    font-size: 1.5rem;
-    font-weight: 700;
-    fill: #9747FF;
-    position:absolute;
-}
-
-/* Individuelle Animation-Delays für jeden Buchstaben */
-textPath a:nth-child(1) {
-    animation-delay: 0s;
-}
-
-textPath a:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-textPath a:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-textPath a:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-textPath a:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-textPath a:nth-child(6) {
-    animation-delay: 0.5s;
-}
-
-textPath a:nth-child(7) {
-    animation-delay: 0.6s;
-}
-
-textPath a:nth-child(8) {
-    animation-delay: 0.7s;
-}
-
-textPath a:nth-child(9) {
-    animation-delay: 0.8s;
-}
-
-#sinePath {
-    fill: none;
-    stroke: none; /* Pfad unsichtbar machen */
-}
-
-textPath {
-    fill: none;
-    stroke: none;
-}
-
-@keyframes text-anim {
+@keyframes color-change-violett {
     0% {
-       transform: translateY(0); // Startposition
-       stroke: #9747FF;
+        color: #ffffff;
     }
+
     50% {
-        transform: translateY(-10px); // 10px nach oben angehoben
-        stroke: #ffffff
+        color: #9747FF;
     }
+
     100% {
-        transform: translateY(0); // Zurück zur Startposition
+        color: #ffffff;
+    }
+}
+
+@keyframes color-change-green {
+    0% {
+        color: #ffffff;
+    }
+
+    50% {
+        color: #00FF00;
+    }
+
+    100% {
+        color: #ffffff;
     }
 }
