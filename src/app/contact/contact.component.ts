@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
@@ -19,8 +19,7 @@ import { PrivacyPolicyOverlayComponent } from '../privacy-policy-overlay/privacy
     PrivacyPolicyOverlayComponent
   ],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   checked = false;

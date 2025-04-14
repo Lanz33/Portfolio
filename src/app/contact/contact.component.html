@@ -7,34 +7,34 @@
         <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="inputField" [class.ng-invalid]="nameInput.invalid && nameInput.touched" [class.ng-valid]="nameInput.valid && nameInput.touched">
                 <input #nameInput="ngModel" [(ngModel)]="contactData.name" minlength="2" name="name" placeholder="Your name" required>
-                <div class="validation-icon valid">
+                <div class="validation-icon valid" *ngIf="nameInput.valid && nameInput.touched">
                     <img src="/assets/img/valid.svg" alt="valid">
                 </div>
-                <div class="validation-icon invalid">
+                <div class="validation-icon invalid" *ngIf="nameInput.invalid && nameInput.touched">
                     <img src="/assets/img/notValid.svg" alt="invalid">
                 </div>
             </div>
-            @if(nameInput.invalid && nameInput.touched) {
-                <p class="error">Name must be at least 2 characters long.</p>
+            @if(!nameInput.valid && nameInput.touched) {
+                <p class="error">Your name is required</p>
             }
             <div class="inputField" [class.ng-invalid]="emailInput.invalid && emailInput.touched" [class.ng-valid]="emailInput.valid && emailInput.touched">
                 <input #emailInput="ngModel" type="email" [(ngModel)]="contactData.email" placeholder="Your email" name="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                <div class="validation-icon valid">
+                <div class="validation-icon valid" *ngIf="emailInput.valid && emailInput.touched">
                     <img src="/assets/img/valid.svg" alt="valid">
                 </div>
-                <div class="validation-icon invalid">
+                <div class="validation-icon invalid" *ngIf="emailInput.invalid && emailInput.touched">
                     <img src="/assets/img/notValid.svg" alt="invalid">
                 </div>
             </div>
-            @if(emailInput.invalid && emailInput.touched) {
-                <p class="error">Please enter a valid email address.</p>
+            @if(!emailInput.valid && emailInput.touched) {
+                <p class="error">Not valid email</p>
             }
             <div class="inputField" [class.ng-invalid]="message.invalid && message.touched" [class.ng-valid]="message.valid && message.touched">
                 <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" placeholder="Your message" required></textarea>
-                <div class="validation-icon valid">
+                <div class="validation-icon valid" *ngIf="message.valid && message.touched">
                     <img src="/assets/img/valid.svg" alt="valid">
                 </div>
-                <div class="validation-icon invalid">
+                <div class="validation-icon invalid" *ngIf="message.invalid && message.touched">
                     <img src="/assets/img/notValid.svg" alt="invalid">
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 [labelPosition]="getLabelPosition()" [disabled]="getIsDisabled()">
                 I´ve read the <a  (click)="openPrivacyPolicy()" class="link">privacy policy</a> and agree to the processing of my data as outlined.
             </mat-checkbox>
-            <button class="send-button" type="submit" value="Submit">Send Message</button>
+            <button class="send-button" type="submit" value="Submit" [ngClass]="{'valid-button': nameInput.valid && emailInput.valid && message.valid && checked}" [disabled]="!(nameInput.valid && emailInput.valid && message.valid && checked)">Send Message</button>
         </form>
     </div>
     <app-privacy-policy-overlay 
