@@ -1,13 +1,13 @@
 section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100vh;
 }
 
 .contact-form {
-    max-width: 500px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,11 +98,16 @@ section {
 }
 
 .contact-text {
-    width: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form-area {
-    width: 40%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .send-button {
@@ -116,6 +121,11 @@ section {
     font-size: 1rem;
     text-align: center;
     margin-top: 32px;
+}
+
+p{
+    width: 85%;
+    
 }
 
 .valid-button {
@@ -132,5 +142,49 @@ section {
     font-size: 0.8rem;
     margin: -25px 0 15px 0;
     align-self: flex-start;
+}
+
+.line{
+    width: 40%;
+    height: 2px;
+    background-color: #9747FF;
+    margin-right: 20px;
+}
+
+.contact-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h2{
+        font-size: 4rem;
+    }
+}
+
+.auto-show {
+    animation: auto-show-animation both;
+    animation-timeline: view(5px 10%);
+}
+
+@keyframes auto-show-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.3);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.3);
+    }
 }
 

@@ -1,0 +1,79 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    &.active {
+        display: flex;
+    }
+}
+
+.overlay-content {
+    background: #141D2F;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    color: white;
+    border: 1px solid #9747FF;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:hover {
+        color: #9747FF;
+    }
+}
+
+.ok-button {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 0.5rem 2rem;
+    background-color: #141D2F;
+    color: white;
+    border: 1px solid #9747FF;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #9747FF;
+    }
+}
+
+.impressum-content {
+    margin-top: 1rem;
+    line-height: 1.6;
+
+    h2 {
+        margin-top: 2rem;
+        color: #9747FF;
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    ul {
+        margin: 1rem 0;
+        padding-left: 2rem;
+    }
+}

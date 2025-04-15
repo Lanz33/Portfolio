@@ -1,0 +1,47 @@
+section {
+    position: relative; // Sicherstellen, dass ::before korrekt angezeigt wird
+    
+}
+
+.footer-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.link-button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.name-impressum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    p {
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #70E61C;
+}
+
+img{
+    margin: 5px;
+    cursor: pointer;
+}

@@ -1,15 +1,20 @@
 <section>
     <div class="skill-icons">
-        <div *ngFor="let skill of skills" class="skill-icon">
+        <div *ngFor="let skill of skills" class="skill-icon auto-show">
             <img [src]="skill.pfad" [alt]="skill.title">
             <p>{{skill.title}}</p>
         </div>
     </div>
     <div class="skill-description">
-        <h2>Skills</h2>
-        <p>I've developed a strong understanding of various frontend technologies and concepts through practical project experience.</p>
-        <h3>Looking for another skill?</h3>
-        <p>Please feel free to contact me. I'm interested in collaborating and expanding my knowledge.</p>
+        <div class="skill-header">
+            <h2>My Skills</h2>
+            <div class="line"></div>
         </div>
+        <p>I've developed a strong understanding of various frontend technologies and concepts through practical project
+            experience.</p>
+            <div class="h3-title">
+        <h3 class="custom-h3">Looking for another skill?</h3>
+    </div>
+        <p>Please feel free to contact me. I'm interested in collaborating and expanding my knowledge.</p>
+    </div>
 </section>
-

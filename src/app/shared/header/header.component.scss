@@ -34,23 +34,19 @@
     fill: #ffffff;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     font-family: Poppins, monospace;
     display: flex;
     justify-content: flex-start;
 
     span {
         display: inline-block;
-        width: 22px; // Feste Breite für jeden Buchstaben
+        width: 25px;
         text-align: center;
     }
 
     .first-letter {
         animation: color-change-violett 4s ease-in-out infinite;
-    }
-    .last-letter {
-        animation: color-change-green 4s ease-in-out infinite;
-        animation-delay: 1s;
     }
 }
 
@@ -59,21 +55,14 @@
         color: #ffffff;
     }
 
-    50% {
+    25% {
         color: #9747FF;
     }
 
-    100% {
-        color: #ffffff;
-    }
-}
-
-@keyframes color-change-green {
-    0% {
-        color: #ffffff;
-    }
-
     50% {
+        color: #ffffff;
+    }
+    75% {
         color: #00FF00;
     }
 

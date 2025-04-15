@@ -1,8 +1,21 @@
 <section>
-    <div class="name-impressum"></div>
-    <div class=""></div>
-    <div></div>
-
-
-
+    <div class="footer-area">
+        <div class="name-impressum">
+            <p>Christian</p>
+            <div (click)="openImpressum()" class="link-button">Impressum</div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Christian Fischer. Alle Rechte vorbehalten.</p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">
+                <img src="/assets/img/github-button.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="/assets/img/linkedin-button.png" alt="LinkedIn">
+            </a>
+        </div>
+        <app-impressum-overlay *ngIf="showImpressum" [isVisible]="showImpressum"
+            (closed)="onImpressumClosed()"></app-impressum-overlay>
+    </div>
 </section>

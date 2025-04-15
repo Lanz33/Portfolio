@@ -1,0 +1,7 @@
+<div class="overlay" [class.active]="isVisible">
+    <div class="overlay-content">
+        <button class="close-button" (click)="close()">×</button>
+        <div class="impressum-content" [innerHTML]="impressumContent"></div>
+        <button class="ok-button" (click)="close()">OK</button>
+    </div>
+</div>
