@@ -3,7 +3,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
 }
 
 .contact-form {
@@ -108,6 +107,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-right: 10px;
 }
 
 .send-button {
@@ -120,7 +120,7 @@ section {
     border-radius: 10px;
     font-size: 1rem;
     text-align: center;
-    margin-top: 32px;
+    margin: 32px 0 32px 0;
 }
 
 p{
@@ -158,6 +158,7 @@ p{
     align-items: center;
     h2{
         font-size: 4rem;
+        margin-right: 10px;
     }
 }
 
@@ -188,3 +189,44 @@ p{
     }
 }
 
+@supports not (animation-timeline: view(5px 10%)) {
+    .auto-show {
+      animation: auto-show-fallback 2s ease-in-out;
+    }
+  
+    @keyframes auto-show-fallback {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.3);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .contact-form-area{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-text{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    
+}
+
+@media (max-width: 380px) {
+    .contact-header{
+        h2{
+            font-size: 2rem;
+            transition: all;
+        }
+    }
+}

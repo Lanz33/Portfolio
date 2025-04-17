@@ -30,7 +30,6 @@ h2 {
 
 .about-me-content {
     margin-top: 32px;
-    ;
     width: 40%;
     display: grid;
     flex-direction: column;
@@ -98,10 +97,12 @@ h2 {
         transform: scale(1);
         opacity: 1;
     }
+
     80% {
         transform: scale(1);
         opacity: 1;
     }
+
     100% {
         transform: scale(0.2);
         opacity: 0;
@@ -124,5 +125,84 @@ h2 {
         :hover {
             transform: scale(1.05);
         }
+    }
+}
+
+/* Fallback für Safari und Firefox */
+@supports not (animation-timeline: view(5px 10%)) {
+    .auto-show {
+        animation: auto-show-fallback 2s ease-in-out;
+    }
+
+    @keyframes auto-show-fallback {
+        0% {
+            opacity: 0;
+            transform: translateY(20px) scale(0.3);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+    }
+
+    .slide-in-right {
+        animation: slide-in-fallback 0.5s ease-in-out;
+    }
+
+    @keyframes slide-in-fallback {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me-image {
+        img {
+            opacity: 0.2;
+        }
+        max-width: 100%; 
+        height: auto; 
+        position: sticky;
+        right: calc(50% - 175px);
+    }
+
+    .line-to-about-me-img {
+        display: none;
+    }
+
+    .about-me-content {
+        width: 90vw;
+        margin: 20px;
+    }
+
+    section {
+        display: inline-flex;
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-me-image {
+        img {
+            width: 80vw;
+            height: 80vw;
+        }
+        position: sticky;
+        right: 5vw;
+    }
+
+    h2 {
+        font-size: 3rem;
+        transition: 0.3s;
+        margin: 20 0;
     }
 }

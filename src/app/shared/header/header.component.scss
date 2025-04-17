@@ -38,15 +38,16 @@
     font-family: Poppins, monospace;
     display: flex;
     justify-content: flex-start;
+    background: url('/assets/img/font-background.png') repeat-x;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+    animation: move-background 5s linear infinite;
 
     span {
         display: inline-block;
         width: 25px;
         text-align: center;
-    }
-
-    .first-letter {
-        animation: color-change-violett 4s ease-in-out infinite;
     }
 }
 
@@ -68,5 +69,14 @@
 
     100% {
         color: #ffffff;
+    }
+}
+
+@keyframes move-background {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
     }
 }
