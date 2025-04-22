@@ -10,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   name: string = 'Christian';
   scrambledName: string[] = [];
+  isMenuOpen: boolean = false;
 
   ngOnInit(): void {
     this.scrambledName = this.name.split(''); // Initialisiere das scrambledName-Array mit den Originalbuchstaben
     this.startScrambling();
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   startScrambling(): void {

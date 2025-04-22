@@ -13,5 +13,10 @@
           <button (click)="useLanguage('en')">en</button>
           <button (click)="useLanguage('de')">de</button> -->
         </div>
+        <div class="burger-icon">
+            <div class="burger-icon__line" [class.active]="isMenuOpen" (click)="toggleMenu()"></div>
+            <div class="burger-icon__line" [class.active]="isMenuOpen"></div>
+            <div class="burger-icon__line" [class.active]="isMenuOpen"></div>
+        </div>
     </div>
 </section>
