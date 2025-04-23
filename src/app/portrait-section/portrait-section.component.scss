@@ -6,6 +6,7 @@
     width: 100%;
     flex-direction: column;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .portrait {
@@ -180,6 +181,7 @@
     z-index: 2;
     margin-top: -22%;
     height: 100%;
+    overflow: hidden;
 }
 
 .top-shadow-svg {
