@@ -7,6 +7,21 @@ body{
     min-width: 320px;
 }
 
+/* Scrollbalken ausblenden für die gesamte Website */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Für Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* Für IE und Edge */
+body {
+    -ms-overflow-style: none;
+}
+
 @font-face {
     font-display: swap; 
     font-family: 'Poppins';

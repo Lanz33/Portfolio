@@ -7,16 +7,18 @@
         <a routerLink="/aboutMe" routerLinkActive="active">About me</a>
         <a routerLink="/skills" routerLinkActive="active">Skills</a>
         <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
-        <div class="title">
-            <!-- <h1>{{ 'demo.title' | translate }}</h1>
-          <span>Switch languages at runtime: </span>
-          <button (click)="useLanguage('en')">en</button>
-          <button (click)="useLanguage('de')">de</button> -->
-        </div>
-        <div class="burger-icon">
-            <div class="burger-icon__line" [class.active]="isMenuOpen" (click)="toggleMenu()"></div>
-            <div class="burger-icon__line" [class.active]="isMenuOpen"></div>
-            <div class="burger-icon__line" [class.active]="isMenuOpen"></div>
-        </div>
-    </div>
+        <div class="language-toggle">
+            <button (click)="toggleLanguage()">{{ currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
+          </div>
+     </div>   
+     <div class="burger-icon" (click)="toggleMenu()" [class.open]="isMenuOpen">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path class="line line-1" d="M3 6h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path>
+            <path class="line line-2" d="M3 12h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path>
+            <path class="line line-3" d="M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path>
+        </svg>
+     </div>
+    
 </section>
+
+<app-mobile-menu [isOpen]="isMenuOpen" (close)="toggleMenu()"></app-mobile-menu>
