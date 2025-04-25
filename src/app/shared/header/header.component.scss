@@ -34,24 +34,26 @@
 }
 
 .header-name {
-    width: 200px;
+    width: 290px;
     fill: #ffffff;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    letter-spacing: 5px;
-    font-family: Poppins, monospace;
+    letter-spacing: 3px;
+    font-family: Poppins ;
     display: flex;
     justify-content: flex-start;
     background: url('/assets/img/font-background.png') repeat-x;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
    
-    animation: move-background 5s linear infinite;
+    animation: move-background 4s linear infinite;
 
     span {
         display: inline-block;
-        width: 25px;
+        width: 30px;
         text-align: center;
+        letter-spacing: 0.05rem;
     }
 }
 
@@ -86,32 +88,11 @@ button {
     }
   }
 
-@keyframes color-change-violett {
-    0% {
-        color: #ffffff;
-    }
-
-    25% {
-        color: #9747FF;
-    }
-
-    50% {
-        color: #ffffff;
-    }
-    75% {
-        color: #00FF00;
-    }
-
-    100% {
-        color: #ffffff;
-    }
-}
-
 @keyframes move-background {
     0% {
-        background-position: 100% 0;
+        background-position: 150% 0;
     }
     100% {
-        background-position: -100% 0;
+        background-position: -150% 0;
     }
 }
