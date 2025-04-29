@@ -8,10 +8,10 @@
     </div>
     
     <nav class="menu-links">
-      <a routerLink="/aboutMe" routerLinkActive="active" (click)="closeMenu()">About me</a>
-      <a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a>
-      <a routerLink="/portfolio" routerLinkActive="active" (click)="closeMenu()">Portfolio</a>
-      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+      <a (click)="scrollToSection('about-me')" class="nav-link" [class.active]="false">About me</a>
+      <a (click)="scrollToSection('skills')" class="nav-link" [class.active]="false">Skills</a>
+      <a (click)="scrollToSection('portfolio')" class="nav-link" [class.active]="false">Portfolio</a>
+      <a (click)="scrollToSection('contact')" class="nav-link" [class.active]="false">Contact</a>
       <div class="language-toggle">
         <button (click)="toggleLanguage()">{{ currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
       </div>

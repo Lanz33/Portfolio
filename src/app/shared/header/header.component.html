@@ -4,9 +4,9 @@
     </div>
 
     <div class="header-menu">
-        <a routerLink="/about-me" routerLinkActive="active">About me</a>
-        <a routerLink="/skills" routerLinkActive="active">Skills</a>
-        <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+        <a (click)="scrollToSection('about-me')" class="nav-link" [class.active]="false">About me</a>
+        <a (click)="scrollToSection('skills')" class="nav-link" [class.active]="false">Skills</a>
+        <a (click)="scrollToSection('portfolio')" class="nav-link" [class.active]="false">Portfolio</a>
         <div class="language-toggle">
             <button (click)="toggleLanguage()">{{ currentLanguage === 'en' ? 'DE' : 'EN' }}</button>
           </div>

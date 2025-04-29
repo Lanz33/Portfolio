@@ -25,6 +25,13 @@ export class HeaderComponent implements OnInit {
     document.body.style.overflow = this.isMenuOpen ? 'hidden' : ''; 
   }
 
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   startScrambling(): void {
     const letters = '0123456789!@#$%^&*()_+[]{}|;:,.<>?';
     const scrambleInterval = () => Math.random() * (8000 - 3000) + 300; 

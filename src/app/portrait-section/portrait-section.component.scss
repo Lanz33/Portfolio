@@ -48,14 +48,15 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 35px;
     
 }
 
 .portrait-content-text-responsive{
     display: none;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: -50px;
+    justify-content: center;
 }
 
 .name {
@@ -188,7 +189,7 @@
     filter: drop-shadow(-4px -5px 3px rgba(0, 0, 0, 0.5));
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 861px) {
     
     .portrait-content-text {
         display: none;
@@ -196,6 +197,8 @@
 
     .portrait-content-text-responsive{
         display: flex;
+    
+
     }
 
     .rotating-svg {

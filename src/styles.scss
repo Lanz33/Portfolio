@@ -7,7 +7,7 @@ body{
     min-width: 320px;
 }
 
-/* Scrollbalken ausblenden für die gesamte Website */
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -15,11 +15,13 @@ body{
 /* Für Firefox */
 html {
     scrollbar-width: none;
+    scroll-behavior: smooth; 
 }
 
 /* Für IE und Edge */
 body {
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
 }
 
 @font-face {

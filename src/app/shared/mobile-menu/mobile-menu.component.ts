@@ -34,6 +34,14 @@ export class MobileMenuComponent {
     this.close.emit();
   }
 
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.closeMenu();
+    }
+  }
+
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
   }
