@@ -1,13 +1,11 @@
-"header": {
-    "about-me": "Über mich",
-    "projects": "Projekte",
-    "contact": "Kontakt"
-}
-
-about-me": {
-    "title": "Über mich",
-    "description": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit einem starken Fokus auf die Entwicklung benutzerfreundlicher und visuell ansprechender Webanwendungen. Meine Reise in der Webentwicklung begann mit einer Faszination für Technologie und Design, und seitdem habe ich meine Fähigkeiten in HTML, CSS, JavaScript und verschiedenen Frameworks verfeinert. <br>
-    Meine berufliche Laufbahn ist geprägt von einem breiten Spektrum an technischen Erfahrungen. Die Herausforderung, technische Funktionalität mit einem ansprechenden Design zu vereinen und dabei die Bedürfnisse der Nutzer in den Mittelpunkt zu stellen, begeistert mich. Meine Erfahrungen und mein technisches Verständnis helfen mir dabei, innovative Lösungen für komplexe Anforderungen zu entwickeln und qualitativ hochwertigen Code zu liefern. <br>
-    Ich bin stets bestrebt, meine Fähigkeiten weiterzuentwickeln und auf dem neuesten Stand der Webtechnologien zu bleiben. Ich glaube an die Kraft des kontinuierlichen Lernens und der Zusammenarbeit, um die besten Ergebnisse zu erzielen. <br>
-    Ob in Frankfurt und Umgebung oder flexibel im Homeoffice – ich bin bereit, mich neuen Herausforderungen zu stellen und mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern, um in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu sein."
+{
+    "header": {
+        "about-me": "Über mich",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "about-me": {
+        "title": "Über mich",
+        "description": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit einem starken Fokus auf die Entwicklung benutzerfreundlicher und visuell ansprechender Webanwendungen. Meine Reise in der Webentwicklung begann mit einer Faszination für Technologie und Design, und seitdem habe ich meine Fähigkeiten in HTML, CSS, JavaScript und verschiedenen Frameworks verfeinert. <br> Meine berufliche Laufbahn ist geprägt von einem breiten Spektrum an technischen Erfahrungen. Die Herausforderung, technische Funktionalität mit einem ansprechenden Design zu vereinen und dabei die Bedürfnisse der Nutzer in den Mittelpunkt zu stellen, begeistert mich. Meine Erfahrungen und mein technisches Verständnis helfen mir dabei, innovative Lösungen für komplexe Anforderungen zu entwickeln und qualitativ hochwertigen Code zu liefern. <br> Ich bin stets bestrebt, meine Fähigkeiten weiterzuentwickeln und auf dem neuesten Stand der Webtechnologien zu bleiben. Ich glaube an die Kraft des kontinuierlichen Lernens und der Zusammenarbeit, um die besten Ergebnisse zu erzielen. <br> Ob in Frankfurt und Umgebung oder flexibel im Homeoffice – ich bin bereit, mich neuen Herausforderungen zu stellen und mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern, um in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu sein."
+    }
 }
