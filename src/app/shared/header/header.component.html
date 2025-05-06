@@ -4,7 +4,7 @@
     </div>
 
     <div class="header-menu">
-        <a (click)="scrollToSection('about-me')" class="nav-link" [class.active]="false">About me</a>
+        <a (click)="scrollToSection('about-me')" class="nav-link" [class.active]="false">{{'header.about-me' | translate}}</a>
         <a (click)="scrollToSection('skills')" class="nav-link" [class.active]="false">Skills</a>
         <a (click)="scrollToSection('portfolio')" class="nav-link" [class.active]="false">Portfolio</a>
         <div class="language-toggle">

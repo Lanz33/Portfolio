@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
+import { TranslateService, TranslateModule } from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, MobileMenuComponent],
+  imports: [CommonModule, RouterModule, MobileMenuComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -64,8 +66,15 @@ export class HeaderComponent implements OnInit {
     scrambleLetter();
   }
 
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.translate.use(this.currentLanguage);
     console.log('Language changed to:', this.currentLanguage);
   }
 }
