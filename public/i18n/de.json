@@ -6,6 +6,25 @@
     },
     "about-me": {
         "title": "Über mich",
-        "description": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit einem starken Fokus auf die Entwicklung benutzerfreundlicher und visuell ansprechender Webanwendungen. Meine Reise in der Webentwicklung begann mit einer Faszination für Technologie und Design, und seitdem habe ich meine Fähigkeiten in HTML, CSS, JavaScript und verschiedenen Frameworks verfeinert. <br> Meine berufliche Laufbahn ist geprägt von einem breiten Spektrum an technischen Erfahrungen. Die Herausforderung, technische Funktionalität mit einem ansprechenden Design zu vereinen und dabei die Bedürfnisse der Nutzer in den Mittelpunkt zu stellen, begeistert mich. Meine Erfahrungen und mein technisches Verständnis helfen mir dabei, innovative Lösungen für komplexe Anforderungen zu entwickeln und qualitativ hochwertigen Code zu liefern. <br> Ich bin stets bestrebt, meine Fähigkeiten weiterzuentwickeln und auf dem neuesten Stand der Webtechnologien zu bleiben. Ich glaube an die Kraft des kontinuierlichen Lernens und der Zusammenarbeit, um die besten Ergebnisse zu erzielen. <br> Ob in Frankfurt und Umgebung oder flexibel im Homeoffice – ich bin bereit, mich neuen Herausforderungen zu stellen und mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern, um in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu sein."
+        "description1": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit einem starken Fokus auf die Entwicklung benutzerfreundlicher und visuell ansprechender Webanwendungen. Meine Reise in der Webentwicklung begann mit einer Faszination für Technologie und Design, und seitdem habe ich meine Fähigkeiten in HTML, CSS, JavaScript und verschiedenen Frameworks verfeinert.",
+        "description2": "Meine berufliche Laufbahn ist durch eine breite Palette an technischer Erfahrung geprägt. Die Herausforderung, technische Funktionalität mit ansprechendem Design zu verbinden und dabei die Bedürfnisse der Nutzer in den Mittelpunkt zu stellen, begeistert mich. Meine Erfahrung und mein technisches Verständnis helfen mir, innovative Lösungen für komplexe Anforderungen zu entwickeln und qualitativ hochwertigen Code zu liefern.",
+        "description3": "Ich bin ständig bestrebt, meine Fähigkeiten weiterzuentwickeln und mich über die neuesten Webtechnologien auf dem Laufenden zu halten. Ich glaube an die Kraft des kontinuierlichen Lernens und der Zusammenarbeit, um die besten Ergebnisse zu erzielen.",
+        "description4": "Ich bin stets bestrebt, meine Fähigkeiten weiterzuentwickeln und auf dem neuesten Stand der Webtechnologien zu bleiben. Ich glaube an die Kraft des kontinuierlichen Lernens und der Zusammenarbeit, um die besten Ergebnisse zu erzielen.",
+        "description5": "Ob in Frankfurt und Umgebung oder flexibel im Homeoffice – ich bin bereit, mich neuen Herausforderungen zu stellen und mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern, um in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu sein."
+    },
+    "skills": {
+        "description1": "Durch praktische Projekterfahrung habe ich ein tiefes Verständnis für verschiedene Frontend-Technologien und -Konzepte entwickelt.",
+        "description2": "Auf der Suche nach einer weiteren Fähigkeit?",
+        "description3": "Sie können mich gerne kontaktieren. Ich bin an einer Zusammenarbeit und der Erweiterung meines Wissens interessiert."
+    },
+    "projects": {
+        "description1": "Entdecke die Welt der Pokémon! Diese Website präsentiert detaillierte Informationen zu allen deinen Lieblingsmonstern, abgerufen über eine offizielle Pokémon-API.",
+        "description2": "Concinero ist ein eigenständiges Projekt, das die Entwicklung eines lokalen Lieferdienstes simuliert und die Frontend-Technologien HTML, CSS und JavaScript demonstriert.",
+        "description3": "Die Entwicklung des 2D-Spiels 'El Pollo Loco' diente dazu, die Prinzipien der objektorientierten Programmierung (OOP) praktisch zu erproben und zu festigen.",
+        "description4": "Entwickelt als Gemeinschaftsprojekt: Join ist ein Kanban-Board, das die Organisation und den Fortschritt von Aufgaben im Team erleichtert."
+    },
+    "contact": {
+        "description1": "Bereit für den nächsten Schritt? Nehmen Sie Kontakt auf!",
+        "description2": "Ob Sie eine neue Website, die Optimierung einer bestehenden Anwendung oder Unterstützung bei Ihrem Frontend-Projekt benötigen – ich freue mich darauf, Ihre Ideen zu hören. Beschreiben Sie Ihr Projekt im Formular, und ich melde mich so schnell wie möglich bei Ihnen."
     }
 }

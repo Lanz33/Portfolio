@@ -5,10 +5,8 @@
     </div>
     <div class="contact-form-area">
         <div class="contact-text auto-show">
-            <h3>Ready for the next level? Contact me!</h3>
-            <p class="auto-show">Whether you need a new website, the optimization of an existing application, or support
-                with your frontend project – I'm excited to hear your ideas. Describe your project in the form, and I'll
-                get back to you as soon as possible.</p>
+            <h3>{{ 'contact.description1' | translate}}</h3>
+            <p class="auto-show">{{ 'contact.description2' | translate}}</p>
         </div>
         <form class="contact-form auto-show" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="inputField" [class.ng-invalid]="nameInput.invalid && nameInput.touched"

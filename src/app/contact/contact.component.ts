@@ -6,6 +6,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PrivacyPolicyOverlayComponent } from '../privacy-policy-overlay/privacy-policy-overlay.component';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,8 @@ import { PrivacyPolicyOverlayComponent } from '../privacy-policy-overlay/privacy
     CommonModule, 
     ReactiveFormsModule, 
     MatDialogModule,
-    PrivacyPolicyOverlayComponent
+    PrivacyPolicyOverlayComponent,
+    TranslateModule
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
@@ -38,6 +40,12 @@ export class ContactComponent {
   }
 
   mailTest = true;
+
+  constructor(private translate: TranslateService) {
+      this.translate.addLangs(['de', 'en']);
+      this.translate.setDefaultLang('en');
+      this.translate.use('en');
+    }
 
   post = {
     endPoint: 'https://christian-fischer.org/sendMail.php',

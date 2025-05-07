@@ -12,7 +12,7 @@
             </div>
             <div class="text-container">
                 <h3>{{project.title}}</h3>
-                <p>{{project.description}}</p>
+                <p>{{ project.descriptionKey | translate }}</p>
                 <div class="skills-container">
                     <p *ngFor="let skill of project.skills" class="skill">{{skill}}</p>
                 </div>

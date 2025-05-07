@@ -6,7 +6,26 @@
     },
     "about-me": {
         "title": "About me",
-        "description": "I am a passionate Frontend Developer with a strong focus on creating user-friendly and visually appealing web applications. My journey in web development began with a fascination for technology and design, and I have since honed my skills in HTML, CSS, JavaScript, and various frameworks. My professional career is characterized by a broad range of technical experience. The challenge of combining technical functionality with appealing design, while keeping the needs of users at the center, excites me. My experience and technical understanding help me to develop innovative solutions for complex requirements and to deliver high-quality code. I am constantly striving to further develop my skills and stay up-to-date with the latest web technologies. I believe in the power of continuous learning and collaboration to achieve the best results. Whether in Frankfurt and the surrounding area or flexibly from a home office – I am ready to take on new challenges and continuously expand my knowledge and skills to stay current in the dynamic world of web development."
+        "description1": "I am a passionate Frontend Developer with a strong focus on creating user-friendly and visually appealing web applications. My journey in web development began with a fascination for technology and design, and I have since honed my skills in HTML, CSS, JavaScript, and various frameworks.",
+        "description2": "My professional career is characterized by a broad range of technical experience. The challenge of combining technical functionality with appealing design, while keeping the needs of users at the center, excites me. My experience and technical understanding help me to develop innovative solutions for complex requirements and to deliver high-quality code.",
+        "description3": "I  am constantly striving to further develop my skills and stay up-to-date with the latest web technologies. I believe in the power of continuous learning and collaboration to achieve the best results.",
+        "description4": "I am able to carry out my professional activities both in Frankfurt and its vicinity, and also remotely from a home office.",
+        "description5": "I am open to new things and like to challenge myself to continuously expand my knowledge and skills."
+    },
+    "skills": {
+        "description1": "I've developed a strong understanding of various frontend technologies and concepts through practical project experience.",
+        "description2": "Looking for another skill?",
+        "description3": "Please feel free to contact me. I'm interested in collaborating and expanding my knowledge."
+    },
+    "projects": {
+        "description1": "Discover the world of Pokémon! This website presents detailed information about all your favorite monsters, retrieved via an official Pokémon API.",
+        "description2": "Concinero is an independent project that simulates the development of a local delivery service and demonstrates the frontend technologies HTML, CSS, and JavaScript.",
+        "description3": "The development of the 2D game 'El Pollo Loco' served to practically test and solidify the principles of object-oriented programming (OOP).",
+        "description4": "Developed as a collaborative project: Join is a Kanban board that facilitates the organization and progress of tasks within a team."
+    },
+    "contact": {
+        "description1": "Ready for the next level? Contact me!",
+        "description2": "Whether you need a new website, the optimization of an existing application, or support with your frontend project – I'm excited to hear your ideas. Describe your project in the form, and I'll get back to you as soon as possible."
     }
 }
 
