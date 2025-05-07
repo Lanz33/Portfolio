@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mobile-menu',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './mobile-menu.component.html',
   styleUrl: './mobile-menu.component.scss'
 })
@@ -14,7 +15,9 @@ export class MobileMenuComponent {
   
   currentLanguage: string = 'en'; // Standard Sprache
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private translate: TranslateService) {
+    this.currentLanguage = this.translate.currentLang || 'en';
+  }
 
   @HostListener('document:click', ['$event'])
   clickOutside(event: MouseEvent) {
@@ -44,5 +47,6 @@ export class MobileMenuComponent {
 
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.translate.use(this.currentLanguage);
   }
 }
