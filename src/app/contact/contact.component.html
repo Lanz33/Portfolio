@@ -4,11 +4,11 @@
         <h2>Contact</h2>
     </div>
     <div class="contact-form-area">
-        <div class="contact-text auto-show">
+        <div class="contact-text animate-on-scroll">
             <h3>{{ 'contact.description1' | translate}}</h3>
-            <p class="auto-show">{{ 'contact.description2' | translate}}</p>
+            <p class="animate-on-scroll">{{ 'contact.description2' | translate}}</p>
         </div>
-        <form class="contact-form auto-show" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form class="contact-form animate-on-scroll" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="inputField" [class.ng-invalid]="nameInput.invalid && nameInput.touched"
                 [class.ng-valid]="nameInput.valid && nameInput.touched">
                 <input #nameInput="ngModel" [(ngModel)]="contactData.name" minlength="2" name="name"

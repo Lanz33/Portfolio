@@ -21,7 +21,7 @@ interface Project {
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
   @ViewChildren('portfolioItem') portfolioItems!: QueryList<ElementRef>;
   projects: Project[] = [];
 
@@ -34,5 +34,34 @@ export class PortfolioComponent implements OnInit {
         descriptionKey: `projects.description${index + 1}`
       }));
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.setupIntersectionObserver();
+  }
+
+  private setupIntersectionObserver(): void {
+    const options = {
+      root: null,
+      rootMargin: '-10% 0px -10% 0px',
+      threshold: [0, 0.1, 0.9, 1.0]
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+          entry.target.classList.add('visible');
+        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, options);
+
+    setTimeout(() => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    }, 100);
   }
 }

@@ -162,66 +162,6 @@ p{
     }
 }
 
-.auto-show {
-    animation: auto-show-animation both;
-    animation-timeline: view(5px 10%);
-}
-
-@keyframes auto-show-animation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-    }
-
-    30% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    70% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-    }
-}
-
-@supports not (animation-timeline: view(5px 10%)) {
-    .auto-show {
-      animation: auto-show-fallback 2s ease-in-out;
-    }
-  
-    @keyframes auto-show-fallback {
-      0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-  }
-
-  @media (max-width: 800px) {
-    .contact-form-area{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-text{
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    
-}
-
 @media (max-width: 380px) {
     .contact-header{
         h2{

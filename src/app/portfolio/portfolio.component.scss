@@ -122,11 +122,6 @@ h2 {
     margin-left: 20px;
 }
 
-.auto-show {
-    animation: auto-show-animation both;
-    animation-timeline: view(5px 10%);
-}
-
 .button-container {
     margin-top: 36px;
     display: flex;
@@ -167,104 +162,6 @@ h2 {
     &:hover {
         background-color: #70E61C;
         transition: all 0.3s ease;
-    }
-}
-
-@keyframes auto-show-animation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-    }
-
-    30% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    70% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-    }
-}
-
-@supports not (animation-timeline: view(5px 10%)) {
-    .auto-show {
-        animation: auto-show-fallback 2s ease-in-out;
-    }
-
-    @keyframes auto-show-fallback {
-        0% {
-            opacity: 0;
-            transform: translateY(20px) scale(0.3);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-
-    }
-}
-
-@media (max-width: 850px) {
-    .portfolio-item:nth-child(odd) {
-        flex-direction: column;
-        align-items: center;
-
-        .image-container {
-            width: 77%;
-            margin: 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .text-container {
-            width: 100%;
-            text-align: center;
-            margin: 0;
-            justify-content: center;
-        }
-
-        .button-container {
-            justify-content: space-around;
-        }
-        
-        .skills-container {
-            justify-content: center;
-        }
-        
-    }
-
-    .portfolio-item:nth-child(even) {
-        flex-direction: column;
-        align-items: center;
-
-        .image-container {
-            width: 77%;
-            margin: 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .text-container {
-            width: 100%;
-            text-align: center;
-            margin: 0;
-            justify-content: center;
-        }
-
-        .skills-container {
-            justify-content: center;
-        }
-
-        .button-container {
-            justify-content: space-around;
-        }
     }
 }
 

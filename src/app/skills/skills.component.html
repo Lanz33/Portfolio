@@ -1,6 +1,6 @@
 <section id="skills">
     <div class="skill-icons">
-        <div *ngFor="let skill of skills" class="skill-icon auto-show">
+        <div *ngFor="let skill of skills" class="skill-icon animate-on-scroll">
             <img [src]="skill.pfad" [alt]="skill.title">
             <p>{{skill.title}}</p>
         </div>
@@ -10,10 +10,10 @@
             <h2>My Skills</h2>
             <div class="line"></div>
         </div>
-        <p class="auto-show">{{'skills.description1' | translate}}</p>
-            <div class="h3-title auto-show">
+        <p class="animate-on-scroll">{{'skills.description1' | translate}}</p>
+            <div class="h3-title animate-on-scroll">
         <h3 class="custom-h3">{{'skills.description2' | translate}}</h3>
     </div>
-        <p class="auto-show">{{'skills.description3' | translate}}.</p>
+        <p class="animate-on-scroll">{{'skills.description3' | translate}}.</p>
     </div>
 </section>

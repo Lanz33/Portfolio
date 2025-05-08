@@ -12,17 +12,7 @@ body{
     display: none;
 }
 
-/* Für Firefox */
-html {
-    scrollbar-width: none;
-    scroll-behavior: smooth; 
-}
 
-/* Für IE und Edge */
-body {
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
-}
 
 @font-face {
     font-display: swap; 
@@ -39,3 +29,16 @@ body {
     font-weight: 700;
     src: url('./../public/assets/font/poppins-v22-latin-700.woff2') format('woff2');
   }
+
+/* Globale Animation für alle Komponenten */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px) scale(0.3);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}

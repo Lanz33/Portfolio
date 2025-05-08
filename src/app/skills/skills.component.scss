@@ -110,68 +110,6 @@ p {
     text-align: end;
 }
 
-.auto-show {
-    animation: auto-show-animation both;
-    animation-timeline: view(5px 10%);
-}
-
-@keyframes auto-show-animation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-    }
-
-    30% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    70% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(20px) scale(0.3);
-    }
-}
-
-@supports not (animation-timeline: view(5px 10%)) {
-    .auto-show {
-        animation: auto-show-fallback 2s ease-in-out;
-    }
-
-    @keyframes auto-show-fallback {
-        0% {
-            opacity: 0;
-            transform: translateY(20px) scale(0.3);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-
-    }
-
-    .slide-in-right {
-        animation: none;
-    }
-
-    @keyframes slide-in-fallback {
-        0% {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-}
-
 @media (max-width: 768px) {
     section {
         flex-direction: column-reverse;
