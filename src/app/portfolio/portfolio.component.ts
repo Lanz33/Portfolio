@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, OnDestroy, QueryList, ViewChildren, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -21,9 +21,10 @@ interface Project {
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent implements OnInit, AfterViewInit {
+export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChildren('portfolioItem') portfolioItems!: QueryList<ElementRef>;
   projects: Project[] = [];
+  private animatedElementsList: HTMLElement[] = [];
 
   constructor(private http: HttpClient, private translate: TranslateService) {}
 
@@ -37,31 +38,40 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
+    setTimeout(() => {
+      this.animatedElementsList = Array.from(document.querySelectorAll('.animate-on-scroll, .portfolio-header'));
+      this.checkElementsVisibility();
+    }, 100);
   }
 
-  private setupIntersectionObserver(): void {
-    const options = {
-      root: null,
-      rootMargin: '-10% 0px -10% 0px',
-      threshold: [0, 0.1, 0.9, 1.0]
-    };
+  ngOnDestroy(): void {
+    // Aufräumen des Event-Listeners beim Zerstören der Komponente
+    window.removeEventListener('scroll', this.checkElementsVisibility);
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          entry.target.classList.add('visible');
-        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, options);
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    this.checkElementsVisibility();
+  }
 
-    setTimeout(() => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(element => {
-        observer.observe(element);
-      });
-    }, 100);
+  private checkElementsVisibility(): void {
+    if (!this.animatedElementsList.length) return;
+
+    this.animatedElementsList.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Element ist sichtbar, wenn es sich im sichtbaren Bereich des Fensters befindet
+      // Mit einem kleinen Puffer, damit Elemente früher sichtbar werden
+      const isVisible = 
+        rect.top < windowHeight * 0.8 && 
+        rect.bottom > windowHeight * 0.2;
+      
+      if (isVisible) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
   }
 }

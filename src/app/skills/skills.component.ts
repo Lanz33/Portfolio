@@ -1,5 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, OnInit, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -9,12 +9,13 @@ interface Skill {
 }
 @Component({
   selector: 'app-skills',
-  imports: [CommonModule, HttpClientModule, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
-export class SkillsComponent implements OnInit, AfterViewInit {
+export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   skills: Skill[] = [];
+  private animatedElementsList: HTMLElement[] = [];
 
   constructor(private translate: TranslateService, private http: HttpClient) {
     this.translate.addLangs(['de', 'en']);
@@ -29,31 +30,36 @@ export class SkillsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
+    setTimeout(() => {
+      this.animatedElementsList = Array.from(document.querySelectorAll('.animate-on-scroll, .skill-header'));
+      this.checkElementsVisibility();
+    }, 100);
   }
 
-  private setupIntersectionObserver(): void {
-    const options = {
-      root: null,
-      rootMargin: '-10% 0px -10% 0px',
-      threshold: [0, 0.1, 0.9, 1.0]
-    };
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.checkElementsVisibility);
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          entry.target.classList.add('visible');
-        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, options);
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    this.checkElementsVisibility();
+  }
 
-    setTimeout(() => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(element => {
-        observer.observe(element);
-      });
-    }, 100);
+  private checkElementsVisibility(): void {
+    if (!this.animatedElementsList.length) return;
+
+    this.animatedElementsList.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const isVisible = 
+        rect.top < windowHeight * 0.8 && 
+        rect.bottom > windowHeight * 0.2;
+      
+      if (isVisible) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
   }
 }

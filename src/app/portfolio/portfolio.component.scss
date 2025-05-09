@@ -44,7 +44,6 @@
 
 .portfolio-item.reverse .text-container {
     text-align: right;
-
     justify-content: right;
 }
 
@@ -106,6 +105,19 @@ h2 {
     justify-content: right;
     align-items: center;
     flex-direction: row;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.portfolio-header.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.portfolio-header:not(.visible) {
+    transform: translateX(200px);
 }
 
 .pre-line-header {
@@ -126,7 +138,7 @@ h2 {
     margin-top: 36px;
     display: flex;
     justify-content: flex-end;
-    gap: 35px; 
+    gap: 35px;
 }
 
 .portfolio-item:nth-child(odd) .button-container {
@@ -165,12 +177,60 @@ h2 {
     }
 }
 
+@media (max-width: 740px) {
+   
+    .portfolio-item:nth-child(odd) {
+        flex-direction: column;
+    }
+    
+    .portfolio-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 90%;
+        justify-content: center;
+
+    }
+
+    .text-container {
+        width: 90%;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+    .portfolio-item.reverse .image-container {
+
+        justify-content: center;
+    }
+    
+    .portfolio-item.reverse .text-container {
+        text-align: center;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    .portfolio-item:nth-child(odd) .button-container {
+        justify-content: center;
+    }
+
+    .skills-container {
+        justify-content: center;
+    }
+    .portfolio-item.reverse .skills-container {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 400px) {
-    .image-container{
+    .image-container {
         width: 90%;
         margin: 0;
-        
+
     }
+
     .portfolio-item:nth-child(odd) {
         .button-container {
             width: 95vw;

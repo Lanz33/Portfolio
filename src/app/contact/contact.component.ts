@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, AfterViewInit } from '@angular/core';
+import { Component, inject, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 import { FormControl, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
@@ -23,7 +23,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements AfterViewInit {
+export class ContactComponent implements AfterViewInit, OnDestroy {
   checked = false;
   indeterminate = false;
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
@@ -31,6 +31,7 @@ export class ContactComponent implements AfterViewInit {
   isDisabled = false;
   submitted = false;
   showPrivacyPolicy = false;
+  private animatedElementsList: HTMLElement[] = [];
 
   http = inject(HttpClient);
   contactData = {
@@ -48,32 +49,41 @@ export class ContactComponent implements AfterViewInit {
     }
 
   ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
+    setTimeout(() => {
+      this.animatedElementsList = Array.from(document.querySelectorAll('.animate-on-scroll, .contact-header'));
+      this.checkElementsVisibility();
+    }, 100);
   }
 
-  private setupIntersectionObserver(): void {
-    const options = {
-      root: null,
-      rootMargin: '-10% 0px -10% 0px',
-      threshold: [0, 0.1, 0.9, 1.0]
-    };
+  ngOnDestroy(): void {
+    // Aufräumen des Event-Listeners beim Zerstören der Komponente
+    window.removeEventListener('scroll', this.checkElementsVisibility);
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-          entry.target.classList.add('visible');
-        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
-          entry.target.classList.remove('visible');
-        }
-      });
-    }, options);
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    this.checkElementsVisibility();
+  }
 
-    setTimeout(() => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(element => {
-        observer.observe(element);
-      });
-    }, 100);
+  private checkElementsVisibility(): void {
+    if (!this.animatedElementsList.length) return;
+
+    this.animatedElementsList.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Element ist sichtbar, wenn es sich im sichtbaren Bereich des Fensters befindet
+      // Mit einem kleinen Puffer, damit Elemente früher sichtbar werden
+      const isVisible = 
+        rect.top < windowHeight * 0.8 && 
+        rect.bottom > windowHeight * 0.2;
+      
+      if (isVisible) {
+        element.classList.add('visible');
+      } else {
+        element.classList.remove('visible');
+      }
+    });
   }
 
   post = {

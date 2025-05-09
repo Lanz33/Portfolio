@@ -156,10 +156,20 @@ p{
     display: flex;
     flex-direction: row;
     align-items: center;
+    transform: translateX(-200px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     h2{
         font-size: 4rem;
         margin-right: 10px;
     }
+}
+
+.contact-header.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.contact-header:not(.visible) {
+    transform: translateX(-200px);
 }
 
 @media (max-width: 380px) {
