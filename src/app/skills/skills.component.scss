@@ -3,6 +3,8 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .skills {
@@ -54,6 +56,7 @@ section {
     transform: translateX(200px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     will-change: opacity, transform;
+    overflow: hidden;
 }
 
 .skill-header.visible {
@@ -125,6 +128,7 @@ p {
     position: sticky;
     top: 20%;
     right: 0;
+    overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -136,6 +140,7 @@ p {
         width: 100vw;
         text-align: start;
         margin-right: 20px;
+        position: relative;
     }
 
     p {

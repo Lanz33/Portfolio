@@ -40,7 +40,7 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
     message: ''
   }
 
-  mailTest = true;
+  mailTest = false;
 
   constructor(private translate: TranslateService) {
       this.translate.addLangs(['de', 'en']);

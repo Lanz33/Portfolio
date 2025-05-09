@@ -172,6 +172,13 @@ p{
     transform: translateX(-200px);
 }
 
+@media (max-width: 735px) {
+    .contact-form-area {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 380px) {
     .contact-header{
         h2{
