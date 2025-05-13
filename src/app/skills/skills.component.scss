@@ -5,6 +5,8 @@ section {
     justify-content: flex-end;
     overflow-x: hidden;
     width: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 .skills {
@@ -36,13 +38,10 @@ section {
     text-align: center;
 }
 
-
-
 .skill-icon img {
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
-
 }
 
 .skill-header {
@@ -51,7 +50,7 @@ section {
     justify-content: end;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 70px;
     opacity: 0;
     transform: translateX(200px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -123,12 +122,19 @@ p {
     flex-direction: column;
     align-items: flex-start;
     width: 50vw;
+    height: 400px;
     text-align: end;
-    height: 100%;
-    position: sticky;
-    top: 20%;
+    top: 0;
     right: 0;
-    overflow-x: hidden;
+}
+
+.background-animation{
+    position: absolute;
+    z-index: -1;
+    filter: blur(20px);
+    transition: all 0.7s ease-in-out;
+    bottom: 0;
+    left: 0;
 }
 
 @media (max-width: 768px) {

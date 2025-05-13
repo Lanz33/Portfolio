@@ -63,4 +63,21 @@
     </div>
     <app-privacy-policy-overlay [isVisible]="showPrivacyPolicy" (closed)="onPrivacyPolicyClosed()">
     </app-privacy-policy-overlay>
+
+    <div class="background-animation">
+    <svg width="200" height="400" viewBox="0 0 678 805" fill="none">
+        <defs>
+            <filter id="turbulence-filter">
+                <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="5" seed="20" />
+                <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R"
+                    yChannelSelector="G" />
+                <animate xlink:href="#turbulence" attributeName="baseFrequency" from="0.005" to="0.001" dur="30s"
+                    calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
+                <animate xlink:href="#turbulence" attributeName="numOctaves" values="3;5;3" dur="30s" calcMode="spline"
+                    keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
+            </filter>
+        </defs>
+        <path d="M405.303 708.084C405.978 652.277 391.433 576.961 355.658 477.524C392.332 395.035 819.289 789.943 405.303 708.084C402.116 971.425 60.0189 800.324 10.5824 679.228C-64.3086 495.779 -88.3907 486.259 -163.612 451.197C-238.833 416.135 -395.212 306.44 -256.876 259.465C-250.43 257.277 -244.646 255.383 -239.467 253.763C-257.883 224.722 -263.193 188.223 -209.085 151.446C69.8372 -38.137 423.098 291.151 321.492 413.181C228.333 525.066 358.304 698.791 405.303 708.084Z" fill="#9747FF" filter="url(#turbulence-filter)" />
+    </svg>
+</div>
 </section>

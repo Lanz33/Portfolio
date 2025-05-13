@@ -1,6 +1,7 @@
 section {
     overflow-x: hidden;
     width: 100%;
+    position: relative;
 }
 
 .portfolio-container {
@@ -165,7 +166,6 @@ h2 {
     &:hover {
         background-color: #70E61C;
     }
-
 }
 
 .button-link {
@@ -184,6 +184,24 @@ h2 {
     }
 }
 
+.background-animation{
+    position: absolute;
+    z-index: -1;
+    filter: blur(20px);
+    transition: all 0.7s ease-in-out;
+    top: 50vh;
+    left: 0vw;
+}
+
+.background-animation2{
+    position: absolute;
+    z-index: -1;
+    filter: blur(20px);
+    transition: all 0.7s ease-in-out;
+    bottom: 0vh;
+    left: calc(100vw - 200px);
+}
+
 @media (max-width: 740px) {
    
     .portfolio-item:nth-child(odd) {
@@ -197,7 +215,6 @@ h2 {
     .image-container {
         width: 90%;
         justify-content: center;
-
     }
 
     .text-container {
@@ -207,7 +224,6 @@ h2 {
     }
 
     .portfolio-item.reverse .image-container {
-
         justify-content: center;
     }
     

@@ -4,6 +4,7 @@ section {
     justify-content: space-between;
     align-items: stretch;
     margin: 32px 0 0 32px;
+    width: 100vw;
 }
 
 img {
@@ -53,7 +54,7 @@ h2 {
     background-color: #70E61C;
 }
 
-/* Neue Animation mit Intersection Observer */
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px) scale(0.3);
@@ -83,6 +84,15 @@ h2 {
             transform: scale(1.05);
         }
     }
+}
+
+.background-animation{
+    position: relative;
+    z-index: -1;
+    filter: blur(20px);
+    transition: all 0.7s ease-in-out;
+    top: 10vh;
+    left : calc(100vw - 200px);
 }
 
 @media (max-width: 768px) {

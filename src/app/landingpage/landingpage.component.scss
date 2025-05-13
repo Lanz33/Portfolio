@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.background-animation{
+    position: absolute;
+    z-index: -1;
+    filter: blur(20px);
+    animation: floatAnimation 15s ease-in-out infinite alternate;
+    transition: all 0.7s ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+    100% {
+        transform: translateY(10px) scale(0.95);
+    }
+}
+
+.animation2{
+    width: 50px;
+    height: 100px;
+    top: 310vh;
+    left : 0vw;
+}
+
+.animation3{
+    width: 50px;
+    height: 100px;
+    top: 500vh;
+    left: 0vw;
+}
+
+.animation4{
+    width: 50px;
+    height: 100px;
+    top: 710vh;
+    left : calc(100vw - 200px);
+}
+
+.animation5{
+    width: 50px;
+    height: 100px;
+    top: 0vh;
+    left :800vw;
+}
