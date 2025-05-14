@@ -1,22 +1,5 @@
-<section id="about-me" class="about-me">
- <div class="background-animation">
-        <svg width="200" height="400" viewBox="0 0 314 737" fill="none">
-            <defs>
-                <filter id="turbulence-filter">
-                    <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="5" seed="20" />
-                    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R"
-                        yChannelSelector="G" />
-                    <animate xlink:href="#turbulence" attributeName="baseFrequency" from="0.005" to="0.001" dur="30s"
-                        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
-                    <animate xlink:href="#turbulence" attributeName="numOctaves" values="3;5;3" dur="30s"
-                        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
-                </filter>
-            </defs>
-            <path
-                d="M228.132 144.613C295.528 63.8372 431.369 102.899 444.743 107.872C444.743 107.872 567.454 48.7449 488.954 170.155C410.453 291.565 647.304 254.353 647.304 254.353L507.445 440.642C507.445 440.642 427.442 227.389 273.691 328.48C214.782 367.212 188.6 422.464 178.713 475.893C227.993 500.617 302.148 520.578 409.771 532.8C939.115 592.918 189.119 643.204 189.119 643.204C189.119 643.204 162.795 561.913 178.713 475.893C-14.3916 379.009 174.438 208.966 228.132 144.613Z"
-                fill="#9747FF" filter="url(#turbulence-filter)" />
-        </svg>
-    </div>
+<section  class="about-me">
+
 
     <div class="about-me-content">
         <h2 class="animate-on-scroll">{{'about-me.title' | translate}}</h2>
@@ -41,5 +24,23 @@
     <div class="about-me-image animate-on-scroll">
         <img src="/assets/img/portrait2.png" alt="About Me">
         <div class="line-to-about-me-img"></div>
+    </div>
+     <div class="background-animation">
+        <svg width="200" height="400" viewBox="0 0 314 737" fill="none">
+            <defs>
+                <filter id="turbulence-filter">
+                    <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="5" seed="20" />
+                    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R"
+                        yChannelSelector="G" />
+                    <animate xlink:href="#turbulence" attributeName="baseFrequency" from="0.005" to="0.001" dur="30s"
+                        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
+                    <animate xlink:href="#turbulence" attributeName="numOctaves" values="3;5;3" dur="30s"
+                        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
+                </filter>
+            </defs>
+            <path
+                d="M228.132 144.613C295.528 63.8372 431.369 102.899 444.743 107.872C444.743 107.872 567.454 48.7449 488.954 170.155C410.453 291.565 647.304 254.353 647.304 254.353L507.445 440.642C507.445 440.642 427.442 227.389 273.691 328.48C214.782 367.212 188.6 422.464 178.713 475.893C227.993 500.617 302.148 520.578 409.771 532.8C939.115 592.918 189.119 643.204 189.119 643.204C189.119 643.204 162.795 561.913 178.713 475.893C-14.3916 379.009 174.438 208.966 228.132 144.613Z"
+                fill="#9747FF" filter="url(#turbulence-filter)" />
+        </svg>
     </div>
 </section>

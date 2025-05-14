@@ -174,12 +174,12 @@ p{
 }
 
 .background-animation{
-    position: relative;
+    position: absolute;
     z-index: -1;
     filter: blur(20px);
     transition: all 0.7s ease-in-out;
-    top: 5vh;
-    left : 0;
+    bottom: -10vh;
+    left: 0vw;
 }
 
 @media (max-width: 735px) {
