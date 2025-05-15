@@ -4,6 +4,7 @@ section {
     align-items: center;
     justify-content: space-around;
     position: relative;
+   
 }
 
 .contact-form {
@@ -186,6 +187,13 @@ p{
     .contact-form-area {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    p{
+        width: 100%;
+        margin: 8px 16px 48px 5px;
     }
 }
 

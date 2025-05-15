@@ -1,7 +1,8 @@
 section {
     overflow-x: hidden;
-    width: 100%;
+    width: 100vw;
     position: relative;
+    margin: 32px 0 0 0;
 }
 
 .portfolio-container {
@@ -198,7 +199,7 @@ h2 {
     z-index: -1;
     filter: blur(20px);
     transition: all 0.7s ease-in-out;
-    bottom: 0vh;
+    bottom: 5vh;
     left: calc(100vw - 200px);
 }
 

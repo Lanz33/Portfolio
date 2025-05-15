@@ -1,6 +1,6 @@
 .portrait-section {
     display: flex;
-    justify-content:first baseline;
+    justify-content: first baseline;
     position: relative;
     background-color: #151E30;
     width: 100%;
@@ -19,7 +19,7 @@
     margin-bottom: 0;
 }
 
-.line-to-portrait-img{
+.line-to-portrait-img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,14 +49,15 @@
     justify-content: center;
     align-items: center;
     margin-right: 35px;
-    
+
 }
 
-.portrait-content-text-responsive{
+.portrait-content-text-responsive {
     display: none;
     margin-bottom: 40px;
-    margin-top: -50px;
+    margin-top: -53px;
     justify-content: center;
+    align-items: center;
 }
 
 .name {
@@ -66,10 +67,10 @@
     font-weight: 400;
     color: #FFFFFF;
     text-align: justify;
-    
+
 }
 
-.job-title{ 
+.job-title {
     color: #9747FF;
     margin: 0;
     font-size: 2.2rem;
@@ -90,6 +91,7 @@
         height: 3px;
         background-color: #9747FF;
     }
+
     .mail-adress {
         margin-left: 10px;
         color: white;
@@ -98,14 +100,14 @@
     }
 }
 
-.icon-img{
+.icon-img {
     width: 30px;
     height: 30px;
     margin-left: 20px;
     cursor: pointer;
 }
 
-.background-animation{
+.background-animation {
     position: absolute;
     filter: blur(20px);
     transition: all 1s linear;
@@ -130,50 +132,58 @@
     filter: drop-shadow(-4px -5px 3px rgba(0, 0, 0, 0.5));
 }
 
+.background-animation {
+    top: 2vw;
+    left: 2vw;
+}
+
+.SVG-background {
+    width: 50vw;
+    height: 50vw;
+}
+
+@media screen and (min-width: 1441px) {
+    .SVG-background {
+        width: 720px;
+        height: 720px; 
+    }
+}
+
 @media screen and (max-width: 861px) {
-    
+
     .portrait-content-text {
         display: none;
     }
 
-    .portrait-content-text-responsive{
+    .portrait-content-text-responsive {
         display: flex;
-    
+        background-color: #151E30;
+        z-index: 1;
 
-    }
-
-    .rotating-svg {
-        width: 100%;
-        transition: 0.5s;
-        &1 {
-            top: 150px; 
+        .name {
+            font-size: 7vw;
         }
 
-        &2 {
-            top: 200px; 
+        .job-title {
+            font-size: 6vw;
         }
 
-        &3 {
-            top: 170px; 
-        }
-
-        &4 {
-            top: 120px; 
-        }
-
-        &5 {
-            top: 210px; 
-        }
-
-        &6 {
-            top: 180px; 
+        .portrait-content-IAm {
+            font-size: 6vw;
+            width: 15vw;
         }
     }
+
 }
 
 @media (max-width: 550px) {
     .mail-adress{
         display: none;
     }
-}
 
+    .portrait-content-text-responsive {
+        margin-top: -20px;
+        margin-bottom: 0;
+        transition: all 1s linear;
+    }
+}
