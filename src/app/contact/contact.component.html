@@ -6,7 +6,7 @@
     <div class="contact-form-area">
         <div class="contact-text animate-on-scroll">
             <h3>{{ 'contact.description1' | translate}}</h3>
-            <p class="animate-on-scroll">{{ 'contact.description2' | translate}}</p>
+            <p class="contact-text animate-on-scroll">{{ 'contact.description2' | translate}}</p>
         </div>
         <form class="contact-form animate-on-scroll" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="inputField" [class.ng-invalid]="nameInput.invalid && nameInput.touched"

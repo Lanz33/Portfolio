@@ -4,7 +4,6 @@ section {
     align-items: center;
     justify-content: space-around;
     position: relative;
-   
 }
 
 .contact-form {
@@ -35,7 +34,6 @@ section {
         height: 24px;
         pointer-events: none;
         z-index: 2;
-
         img {
             width: 100%;
             height: 100%;
@@ -109,7 +107,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-right: 10px;
+
 }
 
 .send-button {
@@ -187,13 +185,12 @@ p{
     .contact-form-area {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+ 
         text-align: center;
     }
 
     p{
-        width: 100%;
-        margin: 8px 16px 48px 5px;
+        padding: 16px 16px 16px 5px;
     }
 }
 

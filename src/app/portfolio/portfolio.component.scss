@@ -3,13 +3,13 @@ section {
     width: 100vw;
     position: relative;
     margin: 32px 0 0 0;
+    padding-top: 24px;
 }
 
 .portfolio-container {
     display: flex;
     flex-direction: column;
-    margin: 20px 0 0 0;
-    width: 100%;
+    margin: 20px 16px 0 16px;
 }
 
 .portfolio-item {
@@ -59,8 +59,7 @@ section {
 }
 
 img {
-    width: 77%;
-    height: auto;
+    width: 90%;
 
 }
 
@@ -172,7 +171,7 @@ h2 {
 .button-link {
     background-color: #9747FF;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 19px;
     border-radius: 10px;
     text-decoration: none;
     font-size: 1.5rem;
@@ -214,14 +213,15 @@ h2 {
     }
 
     .image-container {
-        width: 90%;
+        width: 100%;
         justify-content: center;
+        margin: 0;
     }
 
     .text-container {
-        width: 90%;
+        width: 100%;
         text-align: center;
-        margin: 0 10px;
+        margin: 0;
     }
 
     .portfolio-item.reverse .image-container {
@@ -248,26 +248,3 @@ h2 {
     }
 }
 
-@media (max-width: 400px) {
-    .image-container {
-        width: 90%;
-        margin: 0;
-
-    }
-
-    .portfolio-item:nth-child(odd) {
-        .button-container {
-            width: 95vw;
-        }
-    }
-
-    .portfolio-item:nth-child(even) {
-        .button-git {
-            margin-left: 0;
-        }
-
-        .button-container {
-            width: 95vw;
-        }
-    }
-}

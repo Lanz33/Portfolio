@@ -40,12 +40,9 @@ export class AboutMeComponent implements AfterViewInit, OnDestroy {
     this.animatedElementsList.forEach(element => {
       const rect = element.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      
-      // Element ist sichtbar, wenn es sich im sichtbaren Bereich des Fensters befindet
-      // Mit einem kleinen Puffer, damit Elemente früher sichtbar werden
       const isVisible = 
-        rect.top < windowHeight * 0.8 && 
-        rect.bottom > windowHeight * 0.2;
+        rect.top < windowHeight * 0.9 && 
+        rect.bottom > windowHeight * 0.1;
       
       if (isVisible) {
         element.classList.add('visible');

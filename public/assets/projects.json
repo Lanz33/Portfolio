@@ -9,8 +9,8 @@
         "JavaScript",
         "API"
       ],
-      "github": "",
-      "live": ""
+      "github": "https://github.com/Lanz33/Pokemon",
+      "live": "https://pokedex.christian-fischer.org"
     },
     {
       "title": "Liferando",
@@ -21,8 +21,8 @@
         "CSS",
         "JavaScript"
       ],
-      "github": "",
-      "live": ""
+      "github": "https://github.com/Lanz33/Modul7-Cocinero",
+      "live": "https://cocinero.christian-fischer.org"
     },
     {
       "title": "El Pollo Loco",
@@ -34,8 +34,8 @@
         "JavaScript",
         "Firebase"
       ],
-      "github": "",
-      "live": ""
+      "github": "https://github.com/Lanz33/El-Pollo-Loco",
+      "live": "https://el-pollo-loco.christian-fischer.org"
     },
     {
         "title": "Join",
@@ -47,7 +47,7 @@
           "JavaScript",
           "Firebase"
         ],
-        "github": "",
-        "live": ""
+        "github": "https://github.com/Lanz33/Join",
+        "live": "https://join.christian-fischer.org"
       }
   ]
