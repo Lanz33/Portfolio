@@ -17,8 +17,6 @@ section {
     align-items: flex-start;
     position: relative;
     width: 100%;
-    height: 100%;
-    margin: 0 16px 0 16px;
 }
 
 img {
@@ -94,8 +92,6 @@ h2 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 100px;
-
     position: sticky;
     top: 50px;
     right: 0;
@@ -112,34 +108,35 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    section {
-        margin: 0;
-    }
 
     .about-me-image {
-        position: sticky;
-        top: 40vh;
-        right: 28vw;
+        position: relative;
+        top: -230vw;
+        height: 230vw;
+        right: 0vw;
         width: 100%;
         z-index: -1;
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        margin-bottom: -250vw;
         img {
+            position: sticky;
+            top: 10vh;
+            right: 0;
             opacity: 0.2;
-            width: 50vw;
-            height: 50vw;
+            width: 70vw;
+            height: 70vw;
         }
     }
 
     .about-me {
         flex-direction: column;
-        width: 100%;
     }
 
     .about-me-content {
-        margin: 10vh 16px 0 16px;
-        width: 100%;
+       margin : 0 20px 0 16px;
+        width: auto;
     }
 
     .line-to-about-me-img {
