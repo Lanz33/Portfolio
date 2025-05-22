@@ -17,6 +17,7 @@ section {
     align-items: flex-start;
     position: relative;
     width: 100%;
+    height: 100%;
 }
 
 img {
@@ -92,6 +93,7 @@ h2 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    margin-top: 100px;
     position: sticky;
     top: 50px;
     right: 0;
@@ -110,52 +112,30 @@ h2 {
 @media (max-width: 768px) {
 
     .about-me-image {
-        display: none;
-        position: relative;
-        top: -230vw;
-        height: 230vw;
-        right: 0vw;
-        width: 100%;
+        top: 40vh;
+        right: 28vw;
+        width: 100vw;
+        height: 100vw;
         z-index: -1;
         justify-content: center;
         align-items: flex-start;
-        margin-bottom: -250vw;
+        margin-top: -100vw;
         img {
-            position: sticky;
-            top: 10vh;
-            right: 0;
             opacity: 0.2;
-            width: 70vw;
-            height: 70vw;
+            width: 50vw;
+            height: 50vw;
         }
     }
 
     .about-me {
         flex-direction: column;
+        width: 100%;
+    
     }
 
     .about-me-content {
-        margin: 0 20px 0 16px;
+       margin : 0 16px 0 16px;
         width: auto;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: sticky;
-            top: 15%;
-            left: 15%;
-            width: 70vw;
-            height: 70vw;
-            background-image: url('/assets/img/portrait2-clean.png');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            border-radius: 50%;
-            border: 4px solid #70E61C;
-            opacity: 0.2;
-            z-index: -1;
-        }
     }
 
     .line-to-about-me-img {
