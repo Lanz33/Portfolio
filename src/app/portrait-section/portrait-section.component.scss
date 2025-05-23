@@ -55,7 +55,7 @@
 .portrait-content-text-responsive {
     display: none;
     margin-bottom: 40px;
-    margin-top: -53px;
+    margin-top: -50px;
     justify-content: center;
     align-items: center;
 }
@@ -140,6 +140,71 @@
 .SVG-background {
     width: 50vw;
     height: 50vw;
+}
+
+.arrows-down {
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    width: 24px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+
+    .arrow {
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        border-right: 3px solid #70E61C;
+        border-bottom: 3px solid #70E61C;
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+
+        &:nth-child(1) {
+            animation: arrow-animation 2s linear infinite;
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            animation: arrow-animation 2s linear infinite 0.2s;
+            top: 10px;
+        }
+
+        &:nth-child(3) {
+            animation: arrow-animation 2s linear infinite 0.4s;
+            top: 20px;
+        }
+    }
+
+    &:hover {
+        .arrow {
+            border-color: #9747FF;
+        }
+    }
+}
+
+@keyframes arrow-animation {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    20% {
+        transform: rotate(45deg) scale(1.2);
+        opacity: 1;
+        margin-top: 10px;
+    }
+    50% {
+        transform: rotate(45deg) scale(1);
+    
+        margin-top: 20px;
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+        opacity: 0.2;
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 1441px) {

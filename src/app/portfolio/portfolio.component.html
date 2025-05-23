@@ -4,7 +4,11 @@
         <h2>Portfolio</h2>
         <div class="post-line-header"></div>
     </div>
-    <div class="portfolio-container">
+    <div class="loading-container" *ngIf="isLoading">
+        <div class="loading-spinner"></div>
+        <p>Lade Projekte...</p>
+    </div>
+    <div class="portfolio-container" *ngIf="!isLoading">
         <div *ngFor="let project of projects; let i = index" class="portfolio-item animate-on-scroll"
             [ngClass]="{'reverse': i % 2 !== 0}">
             <div class="image-container">

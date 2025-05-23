@@ -1,17 +1,14 @@
 section {
-    margin: 20px 0 32px 0;
+    margin: 70px 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
+    justify-content: space-between;
 }
 
 .skills {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
 }
@@ -21,8 +18,8 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: stretch;
     align-items: center;
-    max-width: 50vw; 
-    p{
+    max-width: 50vw;
+    p {
         text-align: center;
         margin: 5px 0;
     }
@@ -123,21 +120,51 @@ p {
     width: 50vw;
     height: 400px;
     text-align: end;
-    top: 0;
+    height: 100%;
+    position: sticky;
+    top: 20%;
     right: 0;
 }
 
-.background-animation{
+.background-animation {
     position: absolute;
     z-index: -1;
     filter: blur(20px);
     transition: all 0.7s ease-in-out;
-    bottom: 0;
-    left: 0;
 }
 
 h3{
     margin: 0;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    width: 100%;
+    color: #70E61C;
+
+    p {
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(112, 230, 28, 0.3);
+    border-radius: 50%;
+    border-top-color: #70E61C;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 768px) {
@@ -148,6 +175,7 @@ h3{
     .skill-description {
         width: 100vw;
         text-align: start;
+        margin-right: 20px;
         position: relative;
     }
 
@@ -157,7 +185,7 @@ h3{
 
     .skill-icons {
         max-width: 100vw;
-        margin: 10px;
+       
     }
 
     h2{

@@ -24,16 +24,33 @@ interface Project {
 export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChildren('portfolioItem') portfolioItems!: QueryList<ElementRef>;
   projects: Project[] = [];
+  isLoading: boolean = true;
   private animatedElementsList: HTMLElement[] = [];
 
   constructor(private http: HttpClient, private translate: TranslateService) {}
 
   ngOnInit(): void {
-    this.http.get<Project[]>('assets/projects.json').subscribe(data => {
-      this.projects = data.map((project, index) => ({
-        ...project,
-        descriptionKey: `projects.description${index + 1}`
-      }));
+    this.loadProjects();
+  }
+
+  private loadProjects(retryCount: number = 3): void {
+    this.isLoading = true;
+    this.http.get<Project[]>('assets/projects.json').subscribe({
+      next: (data) => {
+        this.projects = data.map((project, index) => ({
+          ...project,
+          descriptionKey: `projects.description${index + 1}`
+        }));
+        this.isLoading = false;
+      },
+      error: (error) => {
+        console.error('Error loading projects:', error);
+        if (retryCount > 0) {
+          setTimeout(() => {
+            this.loadProjects(retryCount - 1);
+          }, 1000);
+        }
+      }
     });
   }
 
@@ -45,7 +62,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Aufräumen des Event-Listeners beim Zerstören der Komponente
     window.removeEventListener('scroll', this.checkElementsVisibility);
   }
 
@@ -61,8 +77,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
       const rect = element.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      // Element ist sichtbar, wenn es sich im sichtbaren Bereich des Fensters befindet
-      // Mit einem kleinen Puffer, damit Elemente früher sichtbar werden
       const isVisible = 
         rect.top < windowHeight * 0.8 && 
         rect.bottom > windowHeight * 0.2;

@@ -100,13 +100,13 @@ h2 {
     padding-top: 20px;
 }
 
-.background-animation{
+.background-animation {
     position: absolute;
     z-index: -1;
     filter: blur(20px);
     transition: all 0.7s ease-in-out;
     top: 10vh;
-    left : calc(100% - 200px);
+    left: calc(100% - 200px);
 }
 
 @media (max-width: 768px) {
@@ -115,11 +115,12 @@ h2 {
         top: 40vh;
         right: 28vw;
         width: 100vw;
-        height: 100vw;
         z-index: -1;
+        position: sticky;
         justify-content: center;
         align-items: flex-start;
-        margin-top: -100vw;
+        margin-left: -50vw;
+
         img {
             opacity: 0.2;
             width: 50vw;
@@ -128,13 +129,13 @@ h2 {
     }
 
     .about-me {
-        flex-direction: column;
-        width: 100%;
-    
+        flex-direction: row;
+        width: 96%;
+
     }
 
     .about-me-content {
-       margin : 0 16px 0 16px;
+        margin: 0 16px;
         width: auto;
     }
 
@@ -144,13 +145,12 @@ h2 {
 }
 
 @media (max-width: 400px) {
-    
+
 
     h2 {
         font-size: 3rem;
         transition: 0.3s;
         margin: 20 0;
     }
-    
-}
 
+}

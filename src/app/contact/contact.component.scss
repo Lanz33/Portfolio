@@ -4,6 +4,7 @@ section {
     align-items: center;
     justify-content: space-around;
     position: relative;
+    width: 100vw;
 }
 
 .contact-form {
@@ -100,7 +101,7 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-right: 16px;
+    margin-right: 20px;
 }
 
 .contact-form-area {
@@ -198,7 +199,7 @@ p{
 @media (max-width: 380px) {
     .contact-header{
         h2{
-            font-size: 2rem;
+            font-size: 3rem;
             transition: all;
         }
     }
