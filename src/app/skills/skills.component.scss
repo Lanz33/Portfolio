@@ -1,8 +1,9 @@
 section {
-    margin: 70px 0;
+    padding: 14vh 0 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 .skills {
@@ -32,6 +33,7 @@ section {
     text-align: center;
     height: 165px;
     text-align: center;
+    position: relative;
 }
 
 .skill-icon img {
@@ -110,13 +112,13 @@ h2 {
 
 p {
     margin-right: calc(20px + 10%);
+    text-align: end;
 }
 
 .skill-description {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: flex-start;
     width: 50vw;
     height: 400px;
     text-align: end;
@@ -173,9 +175,8 @@ h3{
     }
 
     .skill-description {
-        width: 100vw;
+        width: 100%;
         text-align: start;
-        margin-right: 20px;
         position: relative;
     }
 

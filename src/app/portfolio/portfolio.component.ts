@@ -78,7 +78,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
       const windowHeight = window.innerHeight;
       
       const isVisible = 
-        rect.top < windowHeight * 0.8 && 
+        rect.top < windowHeight * 0.9 && 
         rect.bottom > windowHeight * 0.2;
       
       if (isVisible) {

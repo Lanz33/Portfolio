@@ -1,9 +1,8 @@
 section {
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
     position: relative;
-    margin: 32px 0 0 0;
-    padding-top: 24px;
+    padding: 14vh 0 0 0;
 }
 
 .portfolio-container {
@@ -137,7 +136,7 @@ h2 {
 
 .post-line-header {
     height: 2px;
-    width: 40%;
+    width: 30%;
     background-color: #9747FF;
     margin-left: 20px;
 }

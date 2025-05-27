@@ -1,6 +1,7 @@
 section {
     position: relative;
     background-color: #151E30;
+    margin-left: -20px;
 }
 
 .footer-area{
@@ -37,11 +38,44 @@ section::before {
     content: "";
     display: block;
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: #70E61C;
 }
 
 img{
     margin: 5px;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .footer-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .name-impressum {
+        align-items: center;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .copyright {
+        text-align: center;
+        width: 90%;
+        
+        p {
+            font-size: 0.9rem;
+            margin: 0;
+            width: 100%;
+            word-wrap: break-word;
+        }
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
 }

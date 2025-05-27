@@ -15,7 +15,6 @@ interface Skill {
 })
 export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   skills: Skill[] = [];
-  isLoading: boolean = true;
   private animatedElementsList: HTMLElement[] = [];
 
   constructor(private translate: TranslateService, private http: HttpClient) {
@@ -25,24 +24,8 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.loadSkills();
-  }
-
-  private loadSkills(retryCount: number = 3): void {
-    this.isLoading = true;
-    this.http.get<Skill[]>('assets/skills.json').subscribe({
-      next: (data) => {
-        this.skills = data;
-        this.isLoading = false;
-      },
-      error: (error) => {
-        console.error('Error loading skills:', error);
-        if (retryCount > 0) {
-          setTimeout(() => {
-            this.loadSkills(retryCount - 1);
-          }, 1000);
-        }
-      }
+    this.http.get<Skill[]>('assets/skills.json').subscribe(data => {
+      this.skills = data;
     });
   }
 

@@ -77,4 +77,9 @@ export class HeaderComponent implements OnInit {
     this.translate.use(this.currentLanguage);
     console.log('Language changed to:', this.currentLanguage);
   }
+
+  onLanguageChange(newLanguage: string) {
+    this.currentLanguage = newLanguage;
+    this.translate.use(this.currentLanguage);
+  }
 }

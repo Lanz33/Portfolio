@@ -20,11 +20,16 @@
         <div class="portrait-area">
             <div class="line-to-portrait-img">
                 <img src="assets/img/portrait.png" alt="portrait" class="portrait">
-                <div class="portrait-content-text">
-                    <p class="portrait-content-IAm">I am</p>
-                    <div class>
-                        <p appTextScramble class="name">Christian Fischer</p>
-                        <p class="job-title">Frontend Developer</p>
+                <div>
+                    <div class="portrait-content-text">
+                        <p class="portrait-content-IAm">I am</p>
+                        <div class>
+                            <p appTextScramble class="name">Christian Fischer</p>
+                            <p class="job-title">Frontend Developer</p>
+                        </div>
+                    </div>
+                    <div class="contact-button-area">
+                        <a (click)="scrollToSection('contact')" target="_blank" class="contact-button">Get in touch</a>
                     </div>
                 </div>
             </div>
@@ -48,6 +53,9 @@
                 <p class="job-title">Frontend Developer</p>
             </div>
         </div>
+    </div>
+    <div class="contact-button-responsive-area">
+        <a (click)="scrollToSection('contact')" target="_blank" class="contact-button-responsive">Get in touch</a>
     </div>
 
     <div class="icon-line">
