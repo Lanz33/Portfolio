@@ -3,7 +3,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow-x: hidden;
+/*     overflow-x: hidden; */
 }
 
 .skills {
@@ -120,11 +120,10 @@ p {
     justify-content: flex-start;
     flex-direction: column;
     width: 50vw;
-    height: 400px;
     text-align: end;
     height: 100%;
     position: sticky;
-    top: 20%;
+    top: 10%;
     right: 0;
 }
 

@@ -8,6 +8,7 @@ section {
     z-index: 2;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .about-me {
@@ -18,6 +19,7 @@ section {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow-x: clip;
 }
 
 img {
@@ -102,7 +104,7 @@ h2 {
 
 .background-animation {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     filter: blur(20px);
     transition: all 0.7s ease-in-out;
     top: 10vh;
@@ -112,6 +114,7 @@ h2 {
 @media (max-width: 768px) {
 
     .about-me-image {
+        display: none;
         top: 40vh;
         right: 28vw;
         width: 100vw;
@@ -130,7 +133,7 @@ h2 {
 
     .about-me {
         flex-direction: row;
-        width: 96%;
+        width: 100%;
 
     }
 
