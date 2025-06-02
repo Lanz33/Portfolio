@@ -8,7 +8,8 @@ section {
 .portfolio-container {
     display: flex;
     flex-direction: column;
-    margin: 20px 16px 0 16px;
+    margin: 20px 0 0 0;
+    width: 100vw;;
 }
 
 .portfolio-item {
@@ -274,6 +275,9 @@ h2 {
     }
     .portfolio-item.reverse .skills-container {
         justify-content: center;
+    }
+    p{
+        padding: 8px;
     }
 }
 

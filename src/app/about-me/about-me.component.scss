@@ -114,7 +114,7 @@ h2 {
 @media (max-width: 768px) {
 
     .about-me-image {
-        display: none;
+        display: flex;
         top: 40vh;
         right: 28vw;
         width: 100vw;
