@@ -16,6 +16,7 @@ interface Skill {
 export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   skills: Skill[] = [];
   private animatedElementsList: HTMLElement[] = [];
+  isPopupVisible = false;
 
   constructor(private translate: TranslateService, private http: HttpClient) {
     this.translate.addLangs(['de', 'en']);
@@ -52,7 +53,7 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
       const rect = element.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const isVisible = 
-        rect.top < windowHeight * 0.9 && 
+        rect.top < windowHeight * 0.8 && 
         rect.bottom > windowHeight * 0.2;
       
       if (isVisible) {
@@ -61,5 +62,15 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
         element.classList.remove('visible');
       }
     });
+  }
+
+  showPopup(event: MouseEvent, isLast: boolean): void {
+    if (isLast) {
+      this.isPopupVisible = true;
+    }
+  }
+
+  hidePopup(): void {
+    this.isPopupVisible = false;
   }
 }

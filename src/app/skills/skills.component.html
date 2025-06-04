@@ -1,8 +1,12 @@
 <section id="skills">
     <div class="skill-icons">
-        <div *ngFor="let skill of skills" class="skill-icon animate-on-scroll">
+        <div *ngFor="let skill of skills; let last = last" class="skill-icon animate-on-scroll"
+             (mouseenter)="showPopup($event, last)" (mouseleave)="hidePopup()">
             <img [src]="skill.pfad" [alt]="skill.title">
             <p>{{skill.title}}</p>
+            <div *ngIf="last && isPopupVisible" class="skill-popup">
+                <p>{{'skills.popup' | translate}}</p>
+            </div>
         </div>
     </div>
     <div class="skill-description">
@@ -11,27 +15,18 @@
             <div class="line"></div>
         </div>
         <p class="animate-on-scroll">{{'skills.description1' | translate}}</p>
-        <div class="h3-title animate-on-scroll">
-            <h3>{{'skills.description2' | translate}}</h3>
-        </div>
+            <div class="h3-title animate-on-scroll">
+        <h3 class="custom-h3">{{'skills.description2' | translate}}</h3>
+    </div>
         <p class="animate-on-scroll">{{'skills.description3' | translate}}</p>
     </div>
     <div class="background-animation">
-        <svg width="200" height="500" viewBox="0 0 325 977" fill="none">
-            <defs>
-                <filter id="turbulence-filter">
-                    <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="5" seed="20" />
-                    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R"
-                        yChannelSelector="G" />
-                    <animate xlink:href="#turbulence" attributeName="baseFrequency" from="0.05" to="0.001" dur="15s"
-                        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
-                    <animate xlink:href="#turbulence" attributeName="numOctaves" values="3;5;3" dur="15s"
-                        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" repeatCount="indefinite" />
-                </filter>
-            </defs>
-            <path
-                d="M-470.008 883.211C-539.541 882.42 -212.346 370.119 -212.346 370.119C-212.346 370.119 -93.3322 304.947 -2.53012 237.483C-33.3439 167.99 7.95888 67.6277 79.6118 100.024C129.889 122.757 73.5931 180.926 -2.53012 237.483C14.0679 274.917 51.5904 303.394 116.565 297.341C302.164 280.052 208.054 399.313 208.054 399.313C208.054 399.313 133.601 466.121 142.734 533.779L142.815 534.381C151.873 601.469 152.599 606.843 -112.156 694.21C-377.701 781.837 -400.476 884.002 -470.008 883.211Z"
-                fill="#70E61C" filter="url(#turbulence-filter)" />
+        <svg class="" width="200" height="200" viewBox="-100 -100 200 200">
+            <path d="M 19 -80 L 61 -113 L 90 -116 L 88 -88 L 40 -61 L 44 -8 L 57 0 L 11 -1 L 6 -55 Z" fill="#9747FF" />
+            <feTurbulence id="turbulence" baseFrequency="0.01" numOctaves="3" seed="2" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="20" xChannelSelector="R" yChannelSelector="G" />
+            <animate xlink:href="#turbulence" attributeName="baseFrequency" from="0.01" to="0.1" dur="10s" repeatCount="indefinite" />
+            <animate xlink:href="#turbulence" attributeName="numOctaves" from="3" to="5" dur="10s" repeatCount="indefinite" />
         </svg>
     </div>
 </section>
