@@ -1,0 +1,10 @@
+[
+    {
+        "name": "BackEnd",
+        "pfad": "assets/img/BE.png"
+    },
+    {
+        "name": "Three.JS",
+        "pfad": "assets/img/Threejs.png"
+    }
+]

@@ -1,8 +1,9 @@
 section {
-    margin: 180px 0 180px 0;
+    padding: 12vh 0 0 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    position: relative;
 }
 
 .skills {
@@ -18,8 +19,9 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: stretch;
     align-items: center;
-    max-width: 50vw; 
-    p{
+    max-width: 50vw;
+
+    p {
         text-align: center;
         margin: 5px 0;
     }
@@ -47,23 +49,25 @@ section {
     transform: translate(-50%, calc(-100% - 16px));
     background: #fff;
     color: #141D2F;
-    padding: 14px 18px;
+    padding: 8px;
     border-radius: 16px;
     font-size: 15px;
     z-index: 1000;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    width: max-content;
-    max-width: 230px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    height: 138px;
+    width: 190px;
     text-align: center;
     pointer-events: none;
     white-space: normal;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         content: '';
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
+
     &::before {
         bottom: -10px;
         border-left: 10px solid transparent;
@@ -71,6 +75,7 @@ section {
         border-top: 10px solid #fff;
         z-index: 2;
     }
+
     &::after {
         bottom: -12px;
         border-left: 12px solid transparent;
@@ -86,7 +91,7 @@ section {
     justify-content: end;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 80px;
     opacity: 0;
     transform: translateX(200px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -152,6 +157,29 @@ p {
     margin-right: calc(20px + 10%);
 }
 
+.background-animation {
+    position: absolute;
+    z-index: -1;
+    filter: blur(20px);
+    transition: all 0.7s ease-in-out;
+    top: 50vh;
+    left: 0vw;
+}
+
+.popup-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        width: 50px;
+        height: 50px;
+
+    }
+}
+
 .skill-description {
     display: flex;
     justify-content: flex-start;
@@ -161,8 +189,11 @@ p {
     text-align: end;
     height: 100%;
     position: sticky;
-    top: 20%;
+    top: 15%;
     right: 0;
+    p {
+        width: -webkit-fill-available;
+    }
 }
 
 @media (max-width: 768px) {
@@ -186,7 +217,7 @@ p {
         margin: 10px;
     }
 
-    h2{
+    h2 {
         font-size: 3rem;
         transition: 0.3s;
         margin: 0;
@@ -194,6 +225,16 @@ p {
 
     .line {
         width: 15%;
-        height: 2px;   
+        height: 2px;
+    }
+}
+
+@media (max-width: 450px) {
+  .skill-popup {
+    transform: translate(-80px, -10%);
+  }
+  ::before,
+::after {
+        display: none;
     }
 }

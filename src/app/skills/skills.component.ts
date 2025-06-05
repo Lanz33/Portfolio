@@ -7,6 +7,12 @@ interface Skill {
   title: string;
   pfad: string;
 }
+
+interface PopupSkill {
+  name: string;
+  pfad: string;
+}
+
 @Component({
   selector: 'app-skills',
   imports: [CommonModule, TranslateModule],
@@ -15,6 +21,7 @@ interface Skill {
 })
 export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   skills: Skill[] = [];
+  popupSkills: PopupSkill[] = [];
   private animatedElementsList: HTMLElement[] = [];
   isPopupVisible = false;
 
@@ -27,6 +34,9 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {
     this.http.get<Skill[]>('assets/skills.json').subscribe(data => {
       this.skills = data;
+    });
+    this.http.get<PopupSkill[]>('assets/popup.json').subscribe(data => {
+      this.popupSkills = data;
     });
   }
 
@@ -53,7 +63,7 @@ export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
       const rect = element.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const isVisible = 
-        rect.top < windowHeight * 0.8 && 
+        rect.top < windowHeight * 0.9 && 
         rect.bottom > windowHeight * 0.2;
       
       if (isVisible) {
