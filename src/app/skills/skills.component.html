@@ -2,13 +2,13 @@
     <div class="skill-icons">
         <div *ngFor="let skill of skills; let last = last" class="skill-icon animate-on-scroll"
              (mouseenter)="showPopup($event, last)" (mouseleave)="hidePopup()">
-            <img [src]="skill.pfad" [alt]="skill.title">
+            <img class="single-icon" [src]="skill.pfad" [alt]="skill.title">
             <p>{{skill.title}}</p>
             <div *ngIf="last && isPopupVisible" class="skill-popup">
                 <p>{{'skills.popup' | translate}}</p>
                 <div class="popup-skills">
                     <div *ngFor="let popupskill of popupSkills" class="skill-icon">
-                        <img [src]="popupskill.pfad" [alt]="popupskill.name">
+                        <img [src]="popupskill.pfad" class="popup-skill-icon" [alt]="popupskill.name">
                         <p>{{popupskill.name}}</p>
                     </div>
 
