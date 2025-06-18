@@ -75,7 +75,6 @@ export class HeaderComponent implements OnInit {
   toggleLanguage() {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translate.use(this.currentLanguage);
-    console.log('Language changed to:', this.currentLanguage);
   }
 
   onLanguageChange(newLanguage: string) {

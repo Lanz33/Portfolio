@@ -7,6 +7,7 @@
         <div class="contact-text animate-on-scroll">
             <h3>{{ 'contact.description1' | translate}}</h3>
             <p class="contact-text animate-on-scroll">{{ 'contact.description2' | translate}}</p>
+            <p class="success" *ngIf="submitted">Your message has been sent successfully!</p>
         </div>
         <form class="contact-form animate-on-scroll" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="inputField" [class.ng-invalid]="nameInput.invalid && nameInput.touched"
@@ -59,7 +60,8 @@
             <button class="send-button" type="submit" value="Submit"
                 [ngClass]="{'valid-button': nameInput.valid && emailInput.valid && message.valid && checked}"
                 [disabled]="!(nameInput.valid && emailInput.valid && message.valid && checked)">Send Message</button>
-        </form>
+            </form>
+       
     </div>
     <app-privacy-policy-overlay [isVisible]="showPrivacyPolicy" (closed)="onPrivacyPolicyClosed()">
     </app-privacy-policy-overlay>

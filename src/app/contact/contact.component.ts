@@ -103,6 +103,10 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.submitted = true;
+            setTimeout(() => {
+              this.submitted = false;
+            }, 3000); // Bestätigung verschwindet nach 3 Sekunden
           },
           error: (error) => {
             console.error(error);
@@ -111,6 +115,10 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.submitted = true;
+      setTimeout(() => {
+        this.submitted = false;
+      }, 3000);
     }
   }
 

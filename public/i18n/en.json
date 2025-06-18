@@ -19,10 +19,8 @@
         "popup": "I am interested in the following technologies:"
     },
     "projects": {
-        "description1": "Discover the world of Pokémon! This website presents detailed information about all your favorite monsters, retrieved via an official Pokémon API.",
-        "description2": "Concinero is an independent project that simulates the development of a local delivery service and demonstrates the frontend technologies HTML, CSS, and JavaScript.",
-        "description3": "The development of the 2D game 'El Pollo Loco' served to practically test and solidify the principles of object-oriented programming (OOP).",
-        "description4": "Developed as a collaborative project: Join is a Kanban board that facilitates the organization and progress of tasks within a team."
+        "description1": "The development of the 2D game 'El Pollo Loco' served to practically test and solidify the principles of object-oriented programming (OOP).",
+        "description2": "Developed as a collaborative project: Join is a Kanban board that facilitates the organization and progress of tasks within a team."
     },
     "contact": {
         "description1": "Ready for the next level? Contact me!",
